@@ -1,11 +1,12 @@
 export const theme = {
   colors: {
     grey: "#192D38",
-    background: "#1b065e",
-    white: "#fefefe",
+    background: "rgb(89, 126, 255)",
+    white: "#fff",
   },
   fonts: {
     body: "'Work Sans', sans-serif",
+    mono: "'Inconsolata', monospace",
   },
   sizes: {
     xs: "@media(min-width: 480px)",

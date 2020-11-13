@@ -4,16 +4,19 @@ import { Theme } from "../types";
 
 interface ITitle {
   inView?: boolean;
+  offset?: number;
 }
 
 const STitle = styled.h1`
   font-size: 45px;
+  font-weight: 900;
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   opacity: 0;
-  transform: translateY(5px);
+  transform: translateY(
+    ${(props) => Math.floor((props as any).offset * -0.2)}px
+  );
   transition: opacity 1600ms
-      ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
-    transform 1600ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+    ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
   ${({ theme }: { theme: Theme }) => theme.sizes.xs} {
     font-size: 50px;
@@ -26,11 +29,11 @@ const STitle = styled.h1`
   }
   &.in-view {
     opacity: 1;
-    transform: translateY(0);
   }
   span {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
   }
 `;
 

@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;500;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Work+Sans:wght@100;400;900&display=swap"
           rel="stylesheet"
         />
       </Head>

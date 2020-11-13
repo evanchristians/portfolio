@@ -1,12 +1,19 @@
 import React, { useState } from "react";
+import { Viewport } from "react-is-in-viewport";
 import { Container } from "../components/Container";
 import { Title } from "../components/Title";
-import { Viewport } from "react-is-in-viewport";
+import { useScroll } from "../lib/useScroll";
 
 interface IIndex {}
 
 const Index: React.FC<IIndex> = () => {
   const [titleIsIn, setTitleIsIn] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  if (typeof window !== "undefined") {
+    useScroll(setScrollY);
+  }
+
   return (
     <Container>
       <Viewport
@@ -17,8 +24,8 @@ const Index: React.FC<IIndex> = () => {
           setTitleIsIn(false);
         }}
       >
-        <Title inView={titleIsIn}>
-          Evan Christians<span>.co.za</span>
+        <Title inView={titleIsIn} offset={scrollY}>
+          <span>{"{..."}</span>EvanChristians<span>{" }"}</span>
         </Title>
       </Viewport>
     </Container>

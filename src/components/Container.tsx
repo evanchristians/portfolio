@@ -6,8 +6,9 @@ const SContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
-  background-color: ${({ theme }: { theme: Theme }) => theme.colors.background};
+  background: ${({ theme }: { theme: Theme }) => theme.colors.background};
   padding: 1rem;
   ${({ theme }) => theme.sizes.sm} {
     padding: 0;
