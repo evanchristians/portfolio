@@ -1,4 +1,5 @@
 import Document, { DocumentContext } from "next/document";
+import React from "react";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -18,6 +19,14 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
           <>
+            <head>
+              <link rel="preconnect" href="https://fonts.gstatic.com" />
+              <link
+                href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Work+Sans:wght@100;400;900&display=fallback"
+                rel="stylesheet"
+              />
+              <script src="https://kit.fontawesome.com/ce5d40ef27.js" />
+            </head>
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>

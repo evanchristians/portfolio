@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Viewport } from "react-is-in-viewport";
 import { Container } from "../components/Container";
+import { Fixed } from "../components/Fixed";
 import { Page } from "../components/Page";
+import { SocialIcons } from "../components/SocialIcons";
 import { SubTitle } from "../components/SubTitle";
 import { Title } from "../components/Title";
 import { UnderConstruction } from "../components/UnderConstruction";
@@ -11,6 +13,7 @@ interface IIndex {}
 
 const Index: React.FC<IIndex> = () => {
   const [titleIsIn, setTitleIsIn] = useState(false);
+  const [fixedIsIn, setFixedIsIn] = useState(false);
 
   useEffect(() => {
     console.log(titleIsIn);
@@ -20,6 +23,15 @@ const Index: React.FC<IIndex> = () => {
       <UnderConstruction>
         <i className="fas fa-exclamation-circle"></i> [WIP]
       </UnderConstruction>
+      <Viewport
+        onEnter={() => {
+          setFixedIsIn(true);
+        }}
+      >
+        <Fixed>
+          <SocialIcons inView={fixedIsIn}/>
+        </Fixed>
+      </Viewport>
       <Page>
         <Wrapper>
           <Viewport

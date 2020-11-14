@@ -9,6 +9,7 @@
   "dependencies": {
     "@types/react-is": "^16.7.1",
     "next": "latest",
+    "polished": "^4.0.3",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",

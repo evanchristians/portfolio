@@ -39,7 +39,7 @@ const STitle = styled.h1`
     position: absolute;
     left: 5px;
     bottom: 0;
-    width: 3rem;
+    width: 6rem;
     height: 4px;
     background: ${({ theme }: { theme: Theme }) => theme.colors.white};
     margin-top: 15px;
@@ -55,7 +55,7 @@ const STitle = styled.h1`
 
     &:after {
       transform: scaleX(1);
-      transition-duration: 800ms;
+      transition-duration: 900ms;
       transition-delay: 500ms;
     }
   }
@@ -76,7 +76,7 @@ const SChar: any = styled.div`
     color: ${({ theme }: { theme: Theme }) => theme.colors.white};
     transform: none;
     filter: none;
-    transition-delay: ${(props) => (props as any).delay}ms;
+    transition-delay: ${(props) => 100 + (props as any).delay}ms;
   }
 `;
 
@@ -93,7 +93,7 @@ export const Title: React.FC<ITitle & DOMAttributes<HTMLDivElement>> = ({
           {word.split("").map((char) => {
             position++;
             return (
-              <SChar delay={position * 25} className={inView ? "in" : ""}>
+              <SChar delay={position * 30} className={inView ? "in" : ""}>
                 {char}
               </SChar>
             );

@@ -16,7 +16,7 @@ const SSubTitle = styled.h3`
   margin: 0 0 0 4px;
   max-width: 30rem;
   transform: translateY(5px);
-  transition: all 800ms ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
+  transition: all .6s ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   
   ${({ theme }: { theme: Theme }) => theme.sizes.lg} {
     font-size: 26px;
@@ -26,6 +26,7 @@ const SSubTitle = styled.h3`
     color: ${({ theme }: { theme: Theme }) => theme.colors.white};
     transform: none;
     transition-delay: 800ms;
+    transition-duration: 1.5s;
   }
 `;
 
