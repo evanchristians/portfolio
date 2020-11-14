@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ${({ theme }) => theme.fonts.body}
+    font-family: ${({ theme }) => theme.fonts.mono}
   }
   *, ::before, ::after {
     box-sizing: border-box;

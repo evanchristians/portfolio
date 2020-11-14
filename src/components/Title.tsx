@@ -4,17 +4,17 @@ import { Theme } from "../types";
 
 interface ITitle {
   inView?: boolean;
-  offset?: number;
+  text: string;
 }
 
 const STitle = styled.h1`
   font-size: 45px;
   font-weight: 900;
+  font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   opacity: 0;
-  transform: translateY(
-    ${(props) => Math.floor((props as any).offset * -0.2)}px
-  );
+  line-height: 1;
+  margin: 0;
   transition: opacity 1600ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
@@ -30,15 +30,11 @@ const STitle = styled.h1`
   &.in-view {
     opacity: 1;
   }
-  span {
-    font-size: 26px;
-    font-weight: 400;
-    font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
-  }
 `;
 
-export const Title: React.FC<ITitle & DOMAttributes<HTMLDivElement>> = (
-  props
-) => {
-  return <STitle className={props.inView ? "in-view" : ""} {...props} />;
+export const Title: React.FC<ITitle & DOMAttributes<HTMLDivElement>> = ({
+  inView,
+  text,
+}) => {
+  return <STitle className={inView ? "in-view" : ""}>{text}</STitle>;
 };
