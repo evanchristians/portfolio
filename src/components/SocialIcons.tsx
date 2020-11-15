@@ -14,7 +14,7 @@ const SSocialIcons = styled.ul`
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint} 1s;
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    right: 3rem;
+    right: 2rem;
   }
 
   &.in-view {
@@ -26,8 +26,8 @@ const SSocialIcons = styled.ul`
 const SSocialIconLink = styled.a`
   display: flex;
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   justify-content: center;
   align-items: center;
   margin: 1.5rem 0;
@@ -36,6 +36,7 @@ const SSocialIconLink = styled.a`
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   overflow: hidden;
   text-decoration: none;
+  /* border: 1px solid ${({ theme }: { theme: Theme }) => theme.colors.white}; */
   transition: color 200ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
@@ -59,15 +60,6 @@ const SSocialIconLink = styled.a`
 
   &:hover {
     color: ${({ theme }: { theme: Theme }) => theme.colors.background};
-    /* &.gh {
-      color: #24292e;
-    }
-    &.ml {
-      color: red;
-    }
-    &.li {
-      color: #0a66c2;
-    } */
     &:before {
       transform: none;
       opacity: 1;
@@ -91,7 +83,6 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
         <SSocialIconLink
           href="https://www.linkedin.com/in/evanchristians/"
           target="_blank"
-          className="li"
         >
           <i className="fab fa-linkedin-in"></i>
         </SSocialIconLink>
@@ -100,17 +91,12 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
         <SSocialIconLink
           href="https://github.com/evanchristians"
           target="_blank"
-          className="gh"
         >
           <i className="fab fa-github"></i>
         </SSocialIconLink>
       </li>
       <li>
-        <SSocialIconLink
-          href="mailto:evanryk@gmail.com"
-          target="_blank"
-          className="ml"
-        >
+        <SSocialIconLink href="mailto:evanryk@gmail.com" target="_blank">
           <i className="fas fa-at"></i>
         </SSocialIconLink>
       </li>

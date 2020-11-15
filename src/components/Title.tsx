@@ -17,7 +17,7 @@ const STitle = styled.h1<any>`
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   line-height: 0.9;
-  margin: 0 0 25px;
+  margin: 10% 0 25px;
   padding: 1rem 2rem 1rem 0;
   transition: transform 10ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
@@ -68,7 +68,7 @@ const SWord: any = styled.div`
 `;
 
 const SChar: any = styled.div`
-  transform: translate(-10px, 20px) rotate(15deg);
+  transform: translate(-10px, 30px) rotate(15deg);
   color: transparent;
   transition: color 100ms
       ${({ theme }: { theme: Theme }) => theme.easings.outBack},
@@ -96,7 +96,7 @@ export const Title: React.FC<ITitle & DOMAttributes<HTMLDivElement>> = ({
           {word.split("").map((char) => {
             position++;
             return (
-              <SChar delay={position * 30} className={inView ? "in" : ""}>
+              <SChar delay={position * 45} className={inView ? "in" : ""}>
                 {char}
               </SChar>
             );
