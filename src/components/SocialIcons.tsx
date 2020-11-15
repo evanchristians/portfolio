@@ -36,7 +36,6 @@ const SSocialIconLink = styled.a`
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   overflow: hidden;
   text-decoration: none;
-  /* border: 1px solid ${({ theme }: { theme: Theme }) => theme.colors.white}; */
   transition: color 200ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
@@ -64,9 +63,9 @@ const SSocialIconLink = styled.a`
       transform: none;
       opacity: 1;
       filter: blur(0);
-      transition: transform 200ms
+      transition: transform 300ms
           ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
-        filter 150ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
+        filter 300ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
         opacity 0ms;
     }
   }

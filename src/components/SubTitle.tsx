@@ -10,7 +10,7 @@ interface ISubTitle {
 
 const SSubTitle = styled.h3<any>`
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 100;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
   color: transparent;
   line-height: 1.1;
@@ -24,7 +24,7 @@ const SSubTitle = styled.h3<any>`
     color 0.8s ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
   ${({ theme }: { theme: Theme }) => theme.sizes.lg} {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   &.in-view {

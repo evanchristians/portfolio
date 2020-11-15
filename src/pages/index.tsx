@@ -43,7 +43,8 @@ const Index: React.FC<IIndex> = () => {
   return (
     <Container>
       <UnderConstruction>
-        <i className="fas fa-exclamation-circle"></i> [WIP]
+        {/* <i className="fas fa-exclamation-circle"></i> */}
+        W.I.P.
       </UnderConstruction>
       <Viewport
         onEnter={() => {

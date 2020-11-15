@@ -44,7 +44,7 @@ const STitle = styled.h1<any>`
     left: 5px;
     bottom: 0;
     width: 6rem;
-    height: 4px;
+    height: 3px;
     background: ${({ theme }: { theme: Theme }) => theme.colors.white};
     margin-top: 15px;
     border-radius: 4px;

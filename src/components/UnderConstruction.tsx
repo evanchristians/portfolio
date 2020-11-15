@@ -3,14 +3,13 @@ import styled from "styled-components";
 import { Theme } from "../types";
 
 const SUnderConstruction = styled.div`
+  opacity: .6;
   position: fixed;
   bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 1rem;
   padding: 0.75rem 1.25rem;
   border-radius: 4px;
   color: ${({ theme }: { theme: Theme }) => darken(.4, theme.colors.warning)};
-  font-size: 1.2rem;
   font-weight: 700;
   background: ${({ theme }: { theme: Theme }) => theme.colors.warning};
 `;
