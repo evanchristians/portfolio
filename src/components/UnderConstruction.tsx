@@ -1,4 +1,4 @@
-import { transparentize } from "polished";
+import { darken } from "polished";
 import styled from "styled-components";
 import { Theme } from "../types";
 
@@ -7,13 +7,12 @@ const SUnderConstruction = styled.div`
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  padding: .75rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 4px;
-  color: #ff7700;
+  color: ${({ theme }: { theme: Theme }) => darken(.4, theme.colors.warning)};
   font-size: 1.2rem;
   font-weight: 700;
-  background: ${({ theme }: { theme: Theme }) =>
-    transparentize(0.01, theme.colors.background)};
+  background: ${({ theme }: { theme: Theme }) => theme.colors.warning};
 `;
 
 interface IUnderConstruction {}

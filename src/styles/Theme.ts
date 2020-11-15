@@ -1,9 +1,11 @@
 export const theme = {
   colors: {
     grey: "#262730",
-    background: "#1F4FFF",
+    background: "#4224D2",
     compliment: "#D33F49",
-    white: "#ffffff",
+    white: "#FFFFFF",
+    warning: "#F2C744",
+    black: "#202020",
   },
   fonts: {
     headings: "'Work Sans', sans-serif",

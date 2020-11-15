@@ -5,9 +5,10 @@ import { Theme } from "../types";
 interface ISubTitle {
   inView?: boolean;
   text: string;
+  offset?: number;
 }
 
-const SSubTitle = styled.h3`
+const SSubTitle = styled.h3<any>`
   font-size: 20px;
   font-weight: 700;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
@@ -15,17 +16,18 @@ const SSubTitle = styled.h3`
   line-height: 1;
   margin: 0 0 0 4px;
   max-width: 30rem;
+  padding: 1rem 2rem 1rem 0;
   transform: translateY(5px);
-  transition: all .6s ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
-  
+  transition: all 0.6s
+    ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+
   ${({ theme }: { theme: Theme }) => theme.sizes.lg} {
     font-size: 26px;
   }
-  
+
   &.in-view {
     color: ${({ theme }: { theme: Theme }) => theme.colors.white};
     transform: none;
-    transition-delay: 800ms;
     transition-duration: 1.5s;
   }
 `;
@@ -33,6 +35,7 @@ const SSubTitle = styled.h3`
 export const SubTitle: React.FC<ISubTitle & DOMAttributes<HTMLDivElement>> = ({
   text,
   inView,
+  offset
 }) => {
-  return <SSubTitle className={inView ? "in-view" : ""}>{text}</SSubTitle>;
+  return <SSubTitle offset={offset} className={inView ? "in-view" : ""}>{text}</SSubTitle>;
 };

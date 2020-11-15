@@ -5,9 +5,10 @@ import { Theme } from "../types";
 interface ITitle {
   inView?: boolean;
   text: string;
+  offset?: number;
 }
 
-const STitle = styled.h1`
+const STitle = styled.h1<any>`
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -15,11 +16,14 @@ const STitle = styled.h1`
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
-  opacity: 0;
   line-height: 0.9;
   margin: 0 0 25px;
-  padding: 1rem 0;
-  transition: all 300ms;
+  padding: 1rem 2rem 1rem 0;
+  transition: transform 10ms
+    ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+  transform: translateY(
+    -${(props) => Math.floor((props as any).offset * 0.05)}px
+  );
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     font-size: 70px;
@@ -51,11 +55,9 @@ const STitle = styled.h1`
   }
 
   &.in-view {
-    opacity: 1;
-
     &:after {
       transform: scaleX(1);
-      transition-duration: 900ms;
+      transition-duration: 800ms;
       transition-delay: 500ms;
     }
   }
@@ -83,11 +85,12 @@ const SChar: any = styled.div`
 export const Title: React.FC<ITitle & DOMAttributes<HTMLDivElement>> = ({
   inView,
   text,
+  offset,
 }) => {
   let position = 0;
 
   return (
-    <STitle className={inView ? "in-view" : ""}>
+    <STitle offset={offset} className={inView ? "in-view" : ""}>
       {text.split(" ").map((word) => (
         <SWord>
           {word.split("").map((char) => {
