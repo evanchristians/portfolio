@@ -96,7 +96,7 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
       </li>
       <li>
         <SSocialIconLink href="mailto:evanryk@gmail.com" target="_blank">
-          <i className="devicon-google-plain"></i>
+          <i className="fas fa-at"></i>
         </SSocialIconLink>
       </li>
 
