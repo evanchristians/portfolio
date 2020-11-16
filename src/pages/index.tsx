@@ -62,6 +62,7 @@ const Index: React.FC<IIndex> = () => {
       <Page>
         <Wrapper>
           <Viewport
+            type="overlap"
             onEnter={async () => {
               setTitleIsIn(true);
               await sleep(500);
