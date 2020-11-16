@@ -6,7 +6,7 @@ const SSocialIcons = styled.ul`
   padding: 0;
   list-style: none;
   position: absolute;
-  top: 20%;
+  top: 50%;
   right: 1.75rem;
   opacity: 0;
   transform: translateY(-50%) translateX(6rem);
@@ -30,8 +30,8 @@ const SSocialIconLink = styled.a`
   height: 36px;
   justify-content: center;
   align-items: center;
-  margin: 1.5rem 0;
-  font-size: 1.45rem;
+  margin: 1rem 0;
+  font-size: 18px;
   border-radius: 8px;
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   overflow: hidden;
@@ -48,13 +48,11 @@ const SSocialIconLink = styled.a`
     width: 100%;
     height: 100%;
     opacity: 0;
-    filter: blur(5px);
     transform: scaleX(0);
     transform-origin: right;
     background-color: ${({ theme }: { theme: Theme }) => theme.colors.white};
     transition: transform 0ms 300ms,
-      opacity 700ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
-      filter 200ms 200ms;
+      opacity 700ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   }
 
   &:hover {
@@ -62,10 +60,8 @@ const SSocialIconLink = styled.a`
     &:before {
       transform: none;
       opacity: 1;
-      filter: blur(0);
       transition: transform 300ms
           ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
-        filter 300ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
         opacity 0ms;
     }
   }
@@ -99,7 +95,6 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
           <i className="fas fa-at"></i>
         </SSocialIconLink>
       </li>
-
     </SSocialIcons>
   );
 };

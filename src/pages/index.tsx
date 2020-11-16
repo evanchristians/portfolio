@@ -3,6 +3,7 @@ import { Viewport } from "react-is-in-viewport";
 import { Container } from "../components/Container";
 import { DownArrow } from "../components/DownArrow";
 import { Fixed } from "../components/Fixed";
+import { NavBar } from "../components/NavBar";
 import { Page } from "../components/Page";
 import { SocialIcons } from "../components/SocialIcons";
 import { SubTitle } from "../components/SubTitle";
@@ -59,6 +60,7 @@ const Index: React.FC<IIndex> = () => {
           <DownArrow show={showDownArrow} />
         </Fixed>
       </Viewport>
+      <NavBar />
       <Page>
         <Wrapper>
           <Viewport
@@ -74,12 +76,13 @@ const Index: React.FC<IIndex> = () => {
             }}
           >
             <Title offset={0} inView={titleIsIn} text="Evan Christians" />
-            <SubTitle
-              offset={0}
-              inView={subTitleIsIn}
-              text="full stack developer with interests in experience design and
-            seamless integration."
-            />
+            <SubTitle offset={0} inView={subTitleIsIn}>
+              I'm a <strong>Cape Town, ZA</strong> based{" "}
+              <strong>software engineer</strong> with experience in{" "}
+              <strong>full stack</strong> web development and strong interests
+              in <strong>experience design</strong> and{" "}
+              <strong>seamless integration</strong>.
+            </SubTitle>
           </Viewport>
         </Wrapper>
       </Page>
