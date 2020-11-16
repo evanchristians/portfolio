@@ -9,7 +9,7 @@ export const theme = {
   },
   fonts: {
     headings: "'Work Sans', sans-serif",
-    mono: "'Inconsolata', monospace",
+    mono: "'Roboto Mono', monospace",
   },
   sizes: {
     xs: "@media(min-width: 480px)",

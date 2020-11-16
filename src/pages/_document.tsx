@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
             <head>
               <link rel="preconnect" href="https://fonts.gstatic.com" />
               <link
-                href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Work+Sans:wght@100;400;900&display=fallback"
+                href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Work+Sans:wght@100;400;900&display=fallback"
                 rel="stylesheet"
               />
               <script src="https://kit.fontawesome.com/ce5d40ef27.js" />

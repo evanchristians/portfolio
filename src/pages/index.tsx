@@ -26,7 +26,6 @@ const Index: React.FC<IIndex> = () => {
   onScroll(setScrollOffset);
 
   useEffect(() => {
-    console.log(window.innerHeight)
     if (scrollOffset >= 30) {
       setShowUpArrow(true);
     } else {
@@ -42,9 +41,11 @@ const Index: React.FC<IIndex> = () => {
 
   return (
     <Container>
-      <UnderConstruction>
-        {/* <i className="fas fa-exclamation-circle"></i> */}
-        W.I.P.
+      <UnderConstruction
+        href="https://github.com/evanchristians/portfolio"
+        target="_blank"
+      >
+        WIP
       </UnderConstruction>
       <Viewport
         onEnter={() => {
@@ -80,6 +81,7 @@ const Index: React.FC<IIndex> = () => {
           </Viewport>
         </Wrapper>
       </Page>
+      <Page></Page>
       <Page></Page>
     </Container>
   );

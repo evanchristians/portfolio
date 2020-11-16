@@ -18,7 +18,7 @@ const STitle = styled.h1<any>`
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   line-height: 0.9;
   margin: 10% 0 25px;
-  padding: 1rem 2rem 1rem 0;
+  padding: 1rem 2rem 2rem 0;
   transition: transform 10ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   transform: translateY(

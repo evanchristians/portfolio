@@ -48,13 +48,13 @@ const SSocialIconLink = styled.a`
     width: 100%;
     height: 100%;
     opacity: 0;
-    filter: blur(10px);
-    transform: scaleY(0);
-    transform-origin: bottom;
+    filter: blur(5px);
+    transform: scaleX(0);
+    transform-origin: right;
     background-color: ${({ theme }: { theme: Theme }) => theme.colors.white};
-    transition: transform 0ms 200ms,
-      opacity 500ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
-      filter 200ms ease;
+    transition: transform 0ms 300ms,
+      opacity 700ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
+      filter 200ms 200ms;
   }
 
   &:hover {
