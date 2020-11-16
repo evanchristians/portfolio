@@ -46,6 +46,7 @@ const Index: React.FC<IIndex> = () => {
         target="_blank"
       >
         WIP
+        <i className="fas fa-arrow-right" />
       </UnderConstruction>
       <Viewport
         onEnter={() => {
