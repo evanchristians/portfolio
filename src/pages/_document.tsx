@@ -26,6 +26,10 @@ export default class MyDocument extends Document {
                 rel="stylesheet"
               />
               <script src="https://kit.fontawesome.com/ce5d40ef27.js" />
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
+              />
             </head>
             {initialProps.styles}
             {sheet.getStyleElement()}

@@ -32,7 +32,7 @@ const SSocialIconLink = styled.a`
   align-items: center;
   margin: 1.5rem 0;
   font-size: 1.45rem;
-  border-radius: 6px;
+  border-radius: 8px;
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   overflow: hidden;
   text-decoration: none;
@@ -91,14 +91,15 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
           href="https://github.com/evanchristians"
           target="_blank"
         >
-          <i className="fab fa-github"></i>
+          <i className="devicon-github-plain"></i>
         </SSocialIconLink>
       </li>
       <li>
         <SSocialIconLink href="mailto:evanryk@gmail.com" target="_blank">
-          <i className="fas fa-at"></i>
+          <i className="devicon-google-plain"></i>
         </SSocialIconLink>
       </li>
+
     </SSocialIcons>
   );
 };
