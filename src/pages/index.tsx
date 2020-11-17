@@ -8,7 +8,7 @@ import { Page } from "../components/Page";
 import { SocialIcons } from "../components/SocialIcons";
 import { SubTitle } from "../components/SubTitle";
 import { Title } from "../components/Title";
-import { UnderConstruction } from "../components/UnderConstruction";
+// import { UnderConstruction } from "../components/UnderConstruction";
 import { UpArrow } from "../components/UpArrow";
 import { Wrapper } from "../components/Wrapper";
 import { onScroll } from "../lib/onScroll";
@@ -42,13 +42,13 @@ const Index: React.FC<IIndex> = () => {
 
   return (
     <Container>
-      <UnderConstruction
+      {/* <UnderConstruction
         href="https://github.com/evanchristians/portfolio"
         target="_blank"
       >
         WIP
         <i className="fas fa-arrow-right" />
-      </UnderConstruction>
+      </UnderConstruction> */}
       <Viewport
         onEnter={() => {
           setFixedIsIn(true);
