@@ -5,10 +5,11 @@ const SWrapper = styled.section`
   display: flex;
   max-width: 1024px;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 2.5rem;
   margin: 0 auto;
+  
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    padding: 2rem;
+    padding: 4rem;
   }
 `;
 

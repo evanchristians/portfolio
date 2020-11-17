@@ -7,7 +7,7 @@ const SSocialIcons = styled.ul`
   list-style: none;
   position: absolute;
   top: 50%;
-  right: 1.75rem;
+  right: .5rem;
   opacity: 0;
   transform: translateY(-50%) translateX(6rem);
   transition: all 1.2s

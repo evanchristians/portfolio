@@ -25,10 +25,14 @@ const SNavBar = styled.nav`
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1rem 2rem;
   position: fixed;
+  padding: 0 0.5rem;
   top: 0;
   left: 0;
+
+  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+    padding: 1rem 2rem;
+  }
 
   .nav {
     padding: 0;
@@ -38,7 +42,11 @@ const SNavBar = styled.nav`
     margin-left: auto;
 
     li {
-      margin-left: 3rem;
+      margin-left: 1.5rem;
+
+      ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+        margin-left: 2.5rem;
+      }
     }
     a {
       color: inherit;
@@ -73,6 +81,7 @@ const SNavBar = styled.nav`
       span {
         opacity: 0.6;
         font-weight: 700;
+        transition: all 100ms;
       }
     }
   }
@@ -89,17 +98,17 @@ export const NavBar: React.FC<INavBar> = () => {
       <ul className="nav">
         <li>
           <a href="">
-            about<span> // 01</span>
+            <span>01.</span>About
           </a>
         </li>
         <li>
           <a href="">
-            work<span> // 02</span>
+            <span>02.</span>Work
           </a>
         </li>
         <li>
           <a href="">
-            projects<span> // 03</span>
+            <span>03.</span>Projects
           </a>
         </li>
       </ul>

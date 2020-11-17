@@ -4,11 +4,15 @@ import { Theme } from "../types";
 const SDownArrow = styled.i<IDownArrow>`
   font-size: 12px;
   position: fixed;
-  left: 2.6rem;
+  left: 1rem;
   bottom: 2rem;
   color: ${(props) =>
     (props as any).show ? props.theme.colors.white : "transparent"};
   transition: color 500ms ${(props) => ((props as any).show ? "0ms" : "500ms")};
+  
+  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+    left: 2.6rem;
+  }
 
   &:after {
     content: '';

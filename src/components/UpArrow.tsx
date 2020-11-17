@@ -4,11 +4,15 @@ import { Theme } from "../types";
 const SUpArrow = styled.i<IUpArrow>`
   font-size: 12px;
   position: fixed;
-  left: 2.6rem;
+  left: 1rem;
   top: 6rem;
   color: ${(props) =>
     (props as any).show ? props.theme.colors.white : "transparent"};
   transition: color 500ms ${(props) => ((props as any).show ? "0ms" : "500ms")};
+
+  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+    left: 2.6rem;
+  }
 
   &:after {
     content: "";
@@ -16,7 +20,7 @@ const SUpArrow = styled.i<IUpArrow>`
     background: ${({ theme }: { theme: Theme }) => theme.colors.white};
     top: 1.5rem;
     left: 50%;
-    transform: translateX(-1px); 
+    transform: translateX(-1px);
     width: 2px;
     height: ${(props) => ((props as any).show ? "3rem" : "0")};
     transition: height 700ms
