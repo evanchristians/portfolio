@@ -11,7 +11,7 @@ const SSubTitle = styled.h3<any>`
   font-size: 18px;
   font-weight: 400;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
-  color: transparent;
+  opacity: 0;
   line-height: 1.3;
   margin: 0 0 0 4px;
   max-width: 40rem;
@@ -30,10 +30,11 @@ const SSubTitle = styled.h3<any>`
     font-weight: 700;
     position: relative;
     z-index: 2;
+    color: ${({ theme }: { theme: Theme }) => theme.colors.compliment};
   }
 
   &.in-view {
-    color: ${({ theme }: { theme: Theme }) => theme.colors.white};
+    opacity: 1;
     transform: none;
     transition-duration: 1.5s;
   }
