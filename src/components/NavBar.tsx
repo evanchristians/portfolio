@@ -16,7 +16,7 @@ const SHome = styled.a`
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
 
   &:hover {
-    color: ${({ theme }: { theme: Theme }) => theme.colors.warning};
+    color: ${({ theme }: { theme: Theme }) => theme.colors.compliment};
   }
 `;
 
@@ -66,7 +66,7 @@ const SNavBar = styled.nav`
         }
         span {
           opacity: 1;
-          color: ${({ theme }: { theme: Theme }) => theme.colors.warning};
+          color: ${({ theme }: { theme: Theme }) => theme.colors.compliment};
         }
       }
 

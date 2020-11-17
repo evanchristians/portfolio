@@ -77,7 +77,7 @@ const Index: React.FC<IIndex> = () => {
           >
             <Title offset={0} inView={titleIsIn} text="Evan Christians" />
             <SubTitle offset={0} inView={subTitleIsIn}>
-              I'm a <strong>Cape Town, ZA</strong> based{" "}
+              I'm a <strong>Cape Town</strong> based{" "}
               <strong>software engineer</strong> with experience in{" "}
               <strong>full stack</strong> web development and strong interests
               in <strong>experience design</strong> and{" "}

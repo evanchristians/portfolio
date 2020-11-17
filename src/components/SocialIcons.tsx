@@ -50,7 +50,7 @@ const SSocialIconLink = styled.a`
     opacity: 0;
     transform: scaleX(0);
     transform-origin: right;
-    background-color: ${({ theme }: { theme: Theme }) => theme.colors.white};
+    background-color: ${({ theme }: { theme: Theme }) => theme.colors.compliment};
     transition: transform 0ms 300ms,
       opacity 700ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   }
