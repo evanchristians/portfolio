@@ -5,8 +5,8 @@ const SContainer = styled.main`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.white};
-  background: ${({ theme }: { theme: Theme }) => theme.colors.background};
+  color: ${({ theme }: { theme: Theme }) => theme.colors.black};
+  background: ${({ theme }: { theme: Theme }) => theme.colors.white};
 `;
 
 interface IContainer {}

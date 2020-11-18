@@ -33,7 +33,7 @@ const SSocialIconLink = styled.a`
   margin: 1rem 0;
   font-size: 18px;
   border-radius: 8px;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.white};
+  color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
   overflow: hidden;
   text-decoration: none;
   transition: color 300ms
@@ -50,13 +50,13 @@ const SSocialIconLink = styled.a`
     opacity: 0;
     transform: scaleX(0);
     transform-origin: left;
-    background-color: ${({ theme }: { theme: Theme }) => theme.colors.compliment};
+    background-color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
     transition: transform 150ms 50ms,
       opacity 800ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint} 50ms;
   }
 
   &:hover {
-    color: ${({ theme }: { theme: Theme }) => theme.colors.background};
+    color: ${({ theme }: { theme: Theme }) => theme.colors.white};
     &:before {
       transform: none;
       transform-origin: right;

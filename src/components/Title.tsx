@@ -15,7 +15,6 @@ const STitle = styled.h1<any>`
   font-size: 45px;
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
-  color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   line-height: 0.9;
   margin: 10rem 0 25px;
   padding: 1rem 2rem 2rem 0;
@@ -45,7 +44,7 @@ const STitle = styled.h1<any>`
     bottom: 0;
     width: 6rem;
     height: 3px;
-    background: ${({ theme }: { theme: Theme }) => theme.colors.white};
+    background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
     margin-top: 15px;
     border-radius: 4px;
     transform: scaleX(0);
@@ -75,7 +74,7 @@ const SChar: any = styled.div`
     transform 200ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
 
   &.in {
-    color: ${({ theme }: { theme: Theme }) => theme.colors.white};
+    color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
     transform: none;
     filter: none;
     transition-delay: ${(props) => 100 + (props as any).delay}ms;

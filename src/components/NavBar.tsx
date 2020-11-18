@@ -10,13 +10,13 @@ const SHome = styled.a`
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   justify-content: center;
   align-items: center;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.white};
+  color: ${({ theme }: { theme: Theme }) => theme.colors.black};
   cursor: pointer;
   transition: color 400ms
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
 
   &:hover {
-    color: ${({ theme }: { theme: Theme }) => theme.colors.compliment};
+    color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
   }
 `;
 
@@ -62,7 +62,7 @@ const SNavBar = styled.nav`
         position: absolute;
         bottom: -4px;
         right: 0;
-        background: white;
+        background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
         transition: width 300ms
           ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
       }
@@ -74,12 +74,12 @@ const SNavBar = styled.nav`
         }
         span {
           opacity: 1;
-          color: ${({ theme }: { theme: Theme }) => theme.colors.compliment};
+          color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
         }
       }
 
       span {
-        opacity: 0.6;
+        opacity: 0.25;
         font-weight: 700;
         transition: all 100ms;
       }

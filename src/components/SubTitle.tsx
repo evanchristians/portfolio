@@ -30,7 +30,7 @@ const SSubTitle = styled.h3<any>`
     font-weight: 700;
     position: relative;
     z-index: 2;
-    color: ${({ theme }: { theme: Theme }) => theme.colors.compliment};
+    color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
   }
 
   &.in-view {
