@@ -14,7 +14,7 @@ const SSocialIcons = styled.ul`
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint} 1s;
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    right: 2rem;
+    right: 3rem;
   }
 
   &.in-view {
