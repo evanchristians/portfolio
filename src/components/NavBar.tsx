@@ -10,7 +10,7 @@ const SHome = styled.a`
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   justify-content: center;
   align-items: center;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.black};
+  color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   cursor: pointer;
   transition: color 400ms
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};

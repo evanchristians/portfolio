@@ -42,10 +42,9 @@ const STitle = styled.h1<any>`
     position: absolute;
     left: 5px;
     bottom: 0;
-    width: 6rem;
-    height: 3px;
+    width: 9rem;
+    height: 1px;
     background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
-    margin-top: 15px;
     border-radius: 4px;
     transform: scaleX(0);
     transform-origin: left;
