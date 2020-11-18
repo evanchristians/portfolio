@@ -8,7 +8,7 @@ interface ISubTitle {
 }
 
 const SSubTitle = styled.h3<any>`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
   opacity: 0;
@@ -23,7 +23,7 @@ const SSubTitle = styled.h3<any>`
     color 0.8s ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
   ${({ theme }: { theme: Theme }) => theme.sizes.lg} {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   strong {

@@ -49,6 +49,7 @@ const SNavBar = styled.nav`
       }
     }
     a {
+      font-size: 14px;
       color: inherit;
       text-decoration: none;
       font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
@@ -98,17 +99,17 @@ export const NavBar: React.FC<INavBar> = () => {
       <ul className="nav">
         <li>
           <a href="">
-            <span>01.</span>About
+            about<span> //01</span>
           </a>
         </li>
         <li>
           <a href="">
-            <span>02.</span>Work
+            work<span> //02</span>
           </a>
         </li>
         <li>
           <a href="">
-            <span>03.</span>Projects
+            projects<span> //03</span>
           </a>
         </li>
       </ul>
