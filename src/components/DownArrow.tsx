@@ -7,23 +7,24 @@ const SDownArrow = styled.i<IDownArrow>`
   left: 1rem;
   bottom: 2rem;
   color: ${(props) =>
-    (props as any).show ? props.theme.colors.black : "transparent"};
-  transition: color 500ms ${(props) => ((props as any).show ? "0ms" : "500ms")};
-  
+    (props as any).show ? props.theme.colors.primary : "transparent"};
+  transition: color 500ms ${(props) => ((props as any).show ? "0ms" : "300ms")};
+
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     left: 2.6rem;
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
-    background: ${({theme}: {theme: Theme}) => theme.colors.black};
+    background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
     bottom: 1.5rem;
     left: 50%;
-    transform: translateX(-1px); 
+    transform: translateX(-1px);
     width: 2px;
     height: ${(props) => ((props as any).show ? "3rem" : "0")};
-    transition: height 700ms ${({theme}: {theme: Theme}) => theme.easings.outQuint}
+    transition: height 700ms
+      ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   }
 `;
 

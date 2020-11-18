@@ -7,8 +7,8 @@ const SUpArrow = styled.i<IUpArrow>`
   left: 1rem;
   top: 6rem;
   color: ${(props) =>
-    (props as any).show ? props.theme.colors.black : "transparent"};
-  transition: color 500ms ${(props) => ((props as any).show ? "0ms" : "500ms")};
+    (props as any).show ? props.theme.colors.primary : "transparent"};
+  transition: color 500ms ${(props) => ((props as any).show ? "0ms" : "300ms")};
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     left: 2.6rem;
@@ -17,7 +17,7 @@ const SUpArrow = styled.i<IUpArrow>`
   &:after {
     content: "";
     position: absolute;
-    background: ${({ theme }: { theme: Theme }) => theme.colors.black};
+    background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
     top: 1.5rem;
     left: 50%;
     transform: translateX(-1px);
