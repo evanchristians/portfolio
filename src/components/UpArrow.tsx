@@ -21,7 +21,7 @@ const SUpArrow = styled.i<IUpArrow>`
     top: 1.5rem;
     left: 50%;
     transform: translateX(-1px);
-    width: 1px;
+    width: 2px;
     height: ${(props) => ((props as any).show ? "7rem" : "0")};
     transition: height 700ms
       ${({ theme }: { theme: Theme }) => theme.easings.outQuint};

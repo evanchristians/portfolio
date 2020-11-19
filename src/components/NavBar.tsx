@@ -58,7 +58,7 @@ const SNavBar = styled.nav`
 
       &:after {
         content: "";
-        height: 1px;
+        height: 2px;
         width: 0;
         position: absolute;
         bottom: -4px;
