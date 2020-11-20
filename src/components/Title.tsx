@@ -12,7 +12,7 @@ const STitle = styled.h1<any>`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  font-size: 45px;
+  font-size: clamp(45px, 8vw, 120px);
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   line-height: 0.9;
@@ -23,19 +23,6 @@ const STitle = styled.h1<any>`
   transform: translateY(
     -${(props) => Math.floor((props as any).offset * 0.05)}px
   );
-
-  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    font-size: 70px;
-  }
-  ${({ theme }: { theme: Theme }) => theme.sizes.md} {
-    font-size: 85px;
-  }
-  ${({ theme }: { theme: Theme }) => theme.sizes.lg} {
-    font-size: 8vw;
-  }
-  ${({ theme }: { theme: Theme }) => theme.sizes.xl} {
-    font-size: 116px;
-  }
 
   &:after {
     content: "";
