@@ -81,7 +81,7 @@ const SNavBar = styled.nav`
 
       span {
         font-weight: 700;
-        color: ${({ theme }: { theme: Theme }) => theme.colors.greyLighter};
+        color: ${({ theme }: { theme: Theme }) => theme.colors.greyLightest};
         transition: color 100ms;
       }
     }

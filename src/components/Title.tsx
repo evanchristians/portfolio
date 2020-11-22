@@ -16,8 +16,8 @@ const STitle = styled.h1<any>`
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   line-height: 0.9;
-  margin: 10rem 0 25px;
-  padding: 1rem 2rem 2rem 0;
+  margin: 10rem 0 .5rem;
+  padding: 1rem 2rem 1rem 0;
   transition: transform 10ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   transform: translateY(
