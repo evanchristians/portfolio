@@ -2,15 +2,15 @@ import { DOMAttributes } from "react";
 import styled from "styled-components";
 import { Theme } from "../types";
 
-interface ISubTitle {
+interface ISubText {
   inView?: boolean;
   offset?: number;
 }
 
-const SSubTitle = styled.h3<any>`
+const SSubText = styled.h3<any>`
   font-size: 14px;
+  font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body};
   font-weight: 400;
-  font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
   opacity: 0;
   line-height: 1.3;
   margin: 0 0 0 4px;
@@ -27,7 +27,6 @@ const SSubTitle = styled.h3<any>`
   }
 
   strong {
-    font-weight: 700;
     position: relative;
     z-index: 2;
     color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
@@ -40,14 +39,14 @@ const SSubTitle = styled.h3<any>`
   }
 `;
 
-export const SubTitle: React.FC<ISubTitle & DOMAttributes<HTMLDivElement>> = ({
+export const SubText: React.FC<ISubText & DOMAttributes<HTMLDivElement>> = ({
   children,
   inView,
   offset,
 }) => {
   return (
-    <SSubTitle offset={offset} className={inView ? "in-view" : ""}>
+    <SSubText offset={offset} className={inView ? "in-view" : ""}>
       {children}
-    </SSubTitle>
+    </SSubText>
   );
 };

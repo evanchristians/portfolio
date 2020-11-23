@@ -6,9 +6,12 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ${({ theme }) => theme.fonts.mono};
+    font-family: ${({ theme }) => theme.fonts.body};
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
   *, ::before, ::after {
     box-sizing: border-box;
+
   }
 `;

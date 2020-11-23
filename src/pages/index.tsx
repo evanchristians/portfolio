@@ -6,9 +6,8 @@ import { Fixed } from "../components/Fixed";
 import { NavBar } from "../components/NavBar";
 import { Page } from "../components/Page";
 import { SocialIcons } from "../components/SocialIcons";
-import { SubTitle } from "../components/SubTitle";
+import { SubText } from "../components/SubText";
 import { Title } from "../components/Title";
-// import { UnderConstruction } from "../components/UnderConstruction";
 import { UpArrow } from "../components/UpArrow";
 import { Wrapper } from "../components/Wrapper";
 import { onScroll } from "../lib/onScroll";
@@ -18,7 +17,7 @@ interface IIndex {}
 
 const Index: React.FC<IIndex> = () => {
   const [titleIsIn, setTitleIsIn] = useState(false);
-  const [subTitleIsIn, setSubTitleIsIn] = useState(false);
+  const [subTextIsIn, setSubTextIsIn] = useState(false);
   const [fixedIsIn, setFixedIsIn] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(0);
   const [showUpArrow, setShowUpArrow] = useState(false);
@@ -42,13 +41,6 @@ const Index: React.FC<IIndex> = () => {
 
   return (
     <Container>
-      {/* <UnderConstruction
-        href="https://github.com/evanchristians/portfolio"
-        target="_blank"
-      >
-        WIP
-        <i className="fas fa-arrow-right" />
-      </UnderConstruction> */}
       <Viewport
         onEnter={() => {
           setFixedIsIn(true);
@@ -68,21 +60,21 @@ const Index: React.FC<IIndex> = () => {
             onEnter={async () => {
               setTitleIsIn(true);
               await sleep(500);
-              setSubTitleIsIn(true);
+              setSubTextIsIn(true);
             }}
             onLeave={() => {
               setTitleIsIn(false);
-              setSubTitleIsIn(false);
+              setSubTextIsIn(false);
             }}
           >
             <Title offset={0} inView={titleIsIn} text="Evan Christians" />
-            <SubTitle offset={0} inView={subTitleIsIn}>
+            <SubText offset={0} inView={subTextIsIn}>
               I'm a <strong>Cape Town</strong> based{" "}
               <strong>software engineer</strong> with experience in{" "}
               <strong>full stack</strong> web development and strong interests
               in <strong>experience design</strong> and{" "}
               <strong>seamless integration</strong>.
-            </SubTitle>
+            </SubText>
           </Viewport>
         </Wrapper>
       </Page>

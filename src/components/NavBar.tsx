@@ -10,7 +10,7 @@ const SHome = styled.a`
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   justify-content: center;
   align-items: center;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.white};
+  color: ${({ theme }: { theme: Theme }) => theme.colors.black};
   cursor: pointer;
   transition: color 400ms
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
@@ -52,7 +52,7 @@ const SNavBar = styled.nav`
       font-size: 14px;
       color: inherit;
       text-decoration: none;
-      font-family: ${({ theme }: { theme: Theme }) => theme.fonts.mono};
+      font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body};
       font-weight: 400;
       position: relative;
 
@@ -74,13 +74,11 @@ const SNavBar = styled.nav`
           left: 0;
         }
         span {
-          opacity: 1;
           color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
         }
       }
 
       span {
-        font-weight: 700;
         color: ${({ theme }: { theme: Theme }) => theme.colors.greyLightest};
         transition: color 100ms;
       }
@@ -99,17 +97,17 @@ export const NavBar: React.FC<INavBar> = () => {
       <ul className="nav">
         <li>
           <a href="">
-            about<span> //01</span>
+            <span>01</span> about
           </a>
         </li>
         <li>
           <a href="">
-            work<span> //02</span>
+            <span>02</span> work
           </a>
         </li>
         <li>
           <a href="">
-            projects<span> //03</span>
+            <span>03</span> projects
           </a>
         </li>
       </ul>

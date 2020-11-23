@@ -5,7 +5,7 @@ const SContainer = styled.main`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.white};
+  color: ${({ theme }: { theme: Theme }) => theme.colors.black};
   background: ${({ theme }: { theme: Theme }) => theme.colors.background};
 `;
 

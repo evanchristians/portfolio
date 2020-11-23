@@ -9,9 +9,9 @@ const SSocialIcons = styled.ul`
   top: 50%;
   right: .5rem;
   opacity: 0;
-  transform: translateY(-50%) translateX(6rem);
+  transform: translateY(-50%) translateX(6rem) skewX(25deg);
   transition: all 1.2s
-    ${({ theme }: { theme: Theme }) => theme.easings.outQuint} 1s;
+    ${({ theme }: { theme: Theme }) => theme.easings.outQuint} .5s;
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     right: 3rem;
