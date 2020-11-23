@@ -10,7 +10,7 @@ const SHome = styled.a`
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   justify-content: center;
   align-items: center;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.black};
+  color: ${({ theme }: { theme: Theme }) => theme.colors.greyLighter};
   cursor: pointer;
   transition: color 400ms
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
@@ -79,7 +79,7 @@ const SNavBar = styled.nav`
       }
 
       span {
-        color: ${({ theme }: { theme: Theme }) => theme.colors.greyLightest};
+        color: ${({ theme }: { theme: Theme }) => theme.colors.greyLighter};
         transition: color 100ms;
       }
     }
