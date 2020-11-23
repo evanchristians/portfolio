@@ -3,8 +3,7 @@ import { Theme } from "../types";
 
 const SWrapper = styled.section`
   display: flex;
-  max-width: 1024px;
-  width: 100%;
+  width: min(1240px, 100%);
   padding: 1rem 2.5rem;
   margin: 0 auto;
   

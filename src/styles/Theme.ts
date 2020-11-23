@@ -5,7 +5,7 @@ export const theme = {
     greyLightest: "#bbbbbb",
     background: "#202020",
     compliment: "#930077",
-    primary: "#E42C64",
+    primary: "#DB3F14",
     white: "#F3F3F3",
     warning: "#F2C744",
     black: "#202020",

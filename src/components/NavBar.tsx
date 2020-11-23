@@ -5,18 +5,21 @@ const SHome = styled.a`
   width: 30px;
   height: 30px;
   display: flex;
-  font-size: 18px;
-  font-weight: 900;
+  border-radius: 2px;
+  border: 2px solid ${({ theme }: { theme: Theme }) => theme.colors.greyLighter};
+  font-size: 14px;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   justify-content: center;
   align-items: center;
   color: ${({ theme }: { theme: Theme }) => theme.colors.greyLighter};
   cursor: pointer;
-  transition: color 400ms
+  transition: all 400ms
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
 
   &:hover {
     color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
+    border-color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
+
   }
 `;
 
@@ -92,7 +95,7 @@ export const NavBar: React.FC<INavBar> = () => {
   return (
     <SNavBar>
       <SHome>
-        <i className="fas fa-circle-notch"></i>
+        E
       </SHome>
       <ul className="nav">
         <li>

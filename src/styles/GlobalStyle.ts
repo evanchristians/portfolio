@@ -12,6 +12,5 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
   }
   *, ::before, ::after {
     box-sizing: border-box;
-
   }
 `;
