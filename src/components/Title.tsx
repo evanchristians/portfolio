@@ -60,7 +60,7 @@ const SChar: any = styled.div`
     transform 200ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
 
   &.in {
-    color: ${({ theme }: { theme: Theme }) => theme.colors.black};
+    color: inherit;
     transform: none;
     filter: none;
     transition-delay: ${(props) => 100 + (props as any).delay}ms;

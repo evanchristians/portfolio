@@ -3,7 +3,7 @@ export const theme = {
     grey: "#2A2E32",
     greyLighter: "#32373B",
     greyLightest: "#bbbbbb",
-    background: "#efefe",
+    background: "#202020",
     compliment: "#930077",
     primary: "#E42C64",
     white: "#F3F3F3",

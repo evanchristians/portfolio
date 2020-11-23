@@ -8,11 +8,11 @@ interface ISubText {
 }
 
 const SSubText = styled.h3<any>`
-  font-size: 14px;
+  font-size: 16px;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body};
   font-weight: 400;
   opacity: 0;
-  line-height: 1.3;
+  line-height: 1.5;
   margin: 0 0 0 4px;
   max-width: 40rem;
   padding: 1rem 2rem 1rem 0;
