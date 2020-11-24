@@ -22,7 +22,7 @@ const SHeading = styled.h2<any>`
   color: ${(props) =>
     !props.isInView ? "transparent" : props.theme.colors.primary};
 
-  transition: color 0ms 400ms;
+  transition: color 0ms 500ms;
 
   &:after {
     content: "";
@@ -34,7 +34,7 @@ const SHeading = styled.h2<any>`
     background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 300ms
+    transition: transform 400ms
       ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   }
   &.in::after {
@@ -50,8 +50,8 @@ const SHeadingLead = styled.div`
   margin: 0 1rem;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 500ms
-    ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+  transition: transform 800ms
+    ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
 
   &.in {
     transform: scaleX(1);
@@ -67,7 +67,7 @@ export const AboutMe: React.FC<IAboutMe> = () => {
   useEffect(() => {
     let sleep = setTimeout(() => {
       setAnimateHeading(false);
-    }, 400);
+    }, 200);
     if (!animateHeading)
       return () => {
         clearTimeout(sleep);
@@ -78,7 +78,7 @@ export const AboutMe: React.FC<IAboutMe> = () => {
       type="overlap"
       onEnter={async () => {
         setIsInView(true);
-        await sleep(200);
+        await sleep(300);
         setAnimateHeading(true);
       }}
       onLeave={() => {
