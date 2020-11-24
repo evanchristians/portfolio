@@ -17,6 +17,7 @@ const SHeading = styled.h2<any>`
   font-size: 26px;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   font-weight: 900;
+  padding: 0 .25rem;
   position: relative;
   white-space: nowrap;
   color: ${(props) =>
