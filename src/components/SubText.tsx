@@ -7,10 +7,9 @@ interface ISubText {
   offset?: number;
 }
 
-const SSubText = styled.h3<any>`
-  font-size: 16px;
+const SSubText = styled.p<any>`
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body};
-  font-weight: 400;
+  font-weight: 500;
   opacity: 0;
   line-height: 1.5;
   margin: 0 0 0 4px;
@@ -21,10 +20,6 @@ const SSubText = styled.h3<any>`
   transition: transform 0.6s
       ${({ theme }: { theme: Theme }) => theme.easings.outExpo},
     color 0.8s ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
-
-  ${({ theme }: { theme: Theme }) => theme.sizes.lg} {
-    font-size: 16px;
-  }
 
   strong {
     position: relative;

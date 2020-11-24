@@ -5,21 +5,18 @@ const SHome = styled.a`
   width: 30px;
   height: 30px;
   display: flex;
-  border-radius: 2px;
-  border: 2px solid ${({ theme }: { theme: Theme }) => theme.colors.greyLighter};
+  border: 1px solid ${({ theme }: { theme: Theme }) => theme.colors.primary};
   font-size: 14px;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   justify-content: center;
   align-items: center;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.greyLighter};
+  color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   cursor: pointer;
   transition: all 400ms
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
 
   &:hover {
     color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
-    border-color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
-
   }
 `;
 
@@ -61,7 +58,7 @@ const SNavBar = styled.nav`
 
       &:after {
         content: "";
-        height: 2px;
+        height: 1px;
         width: 0;
         position: absolute;
         bottom: -4px;

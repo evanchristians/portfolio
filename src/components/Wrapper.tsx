@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Theme } from "../types";
 
 const SWrapper = styled.section`
-  display: flex;
   width: min(1240px, 100%);
   padding: 1rem 2.5rem;
   margin: 0 auto;

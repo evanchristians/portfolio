@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Viewport } from "react-is-in-viewport";
+import { AboutMe } from "../components/AboutMe";
 import { Container } from "../components/Container";
 import { DownArrow } from "../components/DownArrow";
 import { Fixed } from "../components/Fixed";
@@ -78,7 +79,11 @@ const Index: React.FC<IIndex> = () => {
           </Viewport>
         </Wrapper>
       </Page>
-      <Page></Page>
+      <Page>
+        <Wrapper>
+          <AboutMe />
+        </Wrapper>
+      </Page>
       <Page></Page>
     </Container>
   );
