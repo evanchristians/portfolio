@@ -70,7 +70,7 @@ export const AboutMe: React.FC<IAboutMe> = () => {
   useEffect(() => {
     let sleep = setTimeout(() => {
       setAnimateHeading(false);
-    }, 200);
+    }, 350);
     if (!animateHeading)
       return () => {
         clearTimeout(sleep);
