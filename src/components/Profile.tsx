@@ -37,7 +37,7 @@ const SProfileImage = styled.img<any>`
   display: block;
   width: 100%;
   opacity: ${(props) => (!props.isInView ? "0" : "1")};
-  transform: ${(props) => (!props.isInView ? "scale(1.1)" : "scale(1)")};
+  transform: ${(props) => (!props.isInView ? "scale(1.1) translateY(1rem)" : "scale(1)")};
   transition: opacity 0ms 400ms,
     transform 4s 500ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 `;

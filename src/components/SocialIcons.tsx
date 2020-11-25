@@ -51,7 +51,7 @@ const SSocialIconLink = styled.a`
     transform: scaleX(0);
     transform-origin: left;
     background-color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
-    transition: transform 150ms,
+    transition: transform 400ms ${({ theme }: { theme: Theme }) => theme.easings.outExpo},
       opacity 800ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint}
         300ms;
   }
@@ -64,8 +64,8 @@ const SSocialIconLink = styled.a`
       transform: none;
       transform-origin: right;
       opacity: 1;
-      transition: transform 200ms
-          ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
+      transition: transform 400ms
+          ${({ theme }: { theme: Theme }) => theme.easings.outExpo},
         opacity 0ms;
     }
   }
