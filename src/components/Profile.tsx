@@ -7,8 +7,9 @@ import { Theme } from "../types";
 const SProfileContainer = styled.figure`
   display: block;
   position: relative;
-  width: clamp(18rem, 30vw, 24rem);
+  width: clamp(min(18rem, 100%), 30vw, 32rem);
   overflow: hidden;
+  margin: 0;
 
   &:after {
     content: "";
