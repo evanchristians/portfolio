@@ -39,7 +39,7 @@ const SProfileImage = styled.img<any>`
   opacity: ${(props) => (!props.isInView ? "0" : "1")};
   transform: ${(props) => (!props.isInView ? "scale(1.1)" : "scale(1)")};
   transition: opacity 0ms 400ms,
-    transform 4s 500ms ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
+    transform 4s 500ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 `;
 
 interface IProfile {}
@@ -51,7 +51,7 @@ export const Profile: React.FC<IProfile> = () => {
   useEffect(() => {
     let sleep = setTimeout(() => {
       setAnimateImage(false);
-    }, 300);
+    }, 350);
     if (!animateImage)
       return () => {
         clearTimeout(sleep);
