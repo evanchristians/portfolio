@@ -8,12 +8,13 @@ interface ISubText {
 }
 
 const SSubText = styled.p<any>`
-  font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body};
+  font-size: clamp(30px, 5vw, 54px);
+  font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   font-weight: 500;
   opacity: 0;
-  line-height: 1.5;
+  line-height: 1.1;
   margin: 0 0 0 4px;
-  max-width: 40rem;
+  max-width: 48rem;
   padding: 1rem 2rem 1rem 0;
   transform: translateY(25px) skewY(4deg);
   transform-origin: left;
@@ -28,7 +29,7 @@ const SSubText = styled.p<any>`
   }
 
   &.in-view {
-    opacity: 1;
+    opacity: 0.7;
     transform: none;
     transition-duration: 1.5s;
   }

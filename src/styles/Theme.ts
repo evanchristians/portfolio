@@ -1,13 +1,13 @@
 export const theme = {
   colors: {
     grey: "#2A2E32",
-    greyLighter: "#ffffff4f",
+    greyLighter: "#eeeeee4f",
     greyLightest: "#666",
-    background: "#E15C56",
+    background: "#823DEF",
     mainDarker: "#C5445E",
     compliment: "#930077",
-    primary: "#fff",
-    white: "#fff",
+    primary: "#eee",
+    white: "#eee",
     warning: "#F2C744",
     black: "#202020",
     shadow: "#01010155"

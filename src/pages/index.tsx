@@ -70,11 +70,12 @@ const Index: React.FC<IIndex> = () => {
           >
             <Title offset={0} inView={titleIsIn} text="Evan Christians" />
             <SubText offset={0} inView={subTextIsIn}>
-              I'm a <strong>Cape Town</strong> based{" "}
+              {/* I'm a <strong>Cape Town</strong> based{" "}
               <strong>software engineer</strong> with experience in{" "}
               <strong>full stack</strong> web development and strong interests
               in <strong>experience design</strong> and{" "}
-              <strong>seamless integration</strong>.
+              <strong>seamless integration</strong>. */}
+              I Build Things & I Love It.
             </SubText>
           </Viewport>
         </Wrapper>
@@ -84,7 +85,6 @@ const Index: React.FC<IIndex> = () => {
           <AboutMe />
         </Wrapper>
       </Page>
-      <Page></Page>
     </Container>
   );
 };

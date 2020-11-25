@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Viewport } from "react-is-in-viewport";
 import styled from "styled-components";
 import { sleep } from "../lib/sleep";
 import { Theme } from "../types";
-import {Profile} from "./Profile"
+import { Flex } from "./Flex";
+import { Profile } from "./Profile";
 
 const SHeadingContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: min(24rem, 100%);
-  margin-left: auto;
+  margin: 0 auto;
   padding: 3rem 0 0;
 `;
 
@@ -96,7 +97,16 @@ export const AboutMe: React.FC<IAboutMe> = () => {
           About Me
         </SHeading>
       </SHeadingContainer>
-      <Profile />
+      <Flex>
+        <Profile />
+        <p>
+          I'm a <strong>Cape Town</strong> based{" "}
+          <strong>software engineer</strong> with experience in{" "}
+          <strong>full stack</strong> web development and strong interests in{" "}
+          <strong>experience design</strong> and{" "}
+          <strong>seamless integration</strong>.
+        </p>
+      </Flex>
     </Viewport>
   );
 };

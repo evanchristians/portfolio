@@ -4,12 +4,15 @@ import styled from "styled-components";
 import { sleep } from "../lib/sleep";
 import { Theme } from "../types";
 
-const SProfileContainer = styled.figure`
-  display: block;
+const SProfileContainer = styled.div`
+  display: flex;
   position: relative;
   width: clamp(min(18rem, 100%), 30vw, 32rem);
   overflow: hidden;
   margin: 0;
+  div {
+    width: 100%;
+  }
 
   &:after {
     content: "";
@@ -55,25 +58,25 @@ export const Profile: React.FC<IProfile> = () => {
       };
   }, [animateImage]);
   return (
-    <Viewport
-      type="overlap"
-      onEnter={async () => {
-        await sleep(300);
-        setIsInView(true);
-        await sleep(100);
-        setAnimateImage(true);
-      }}
-      onLeave={() => {
-        setIsInView(false);
-      }}
-    >
-      <SProfileContainer className={animateImage ? "in" : undefined}>
+    <SProfileContainer className={animateImage ? "in" : undefined}>
+      <Viewport
+        type="overlap"
+        onEnter={async () => {
+          await sleep(300);
+          setIsInView(true);
+          await sleep(100);
+          setAnimateImage(true);
+        }}
+        onLeave={() => {
+          setIsInView(false);
+        }}
+      >
         <SProfileImage
           isInView={isInView}
           src="img/me.png"
           alt="Evan Christians, Full Stack Developer"
         />
-      </SProfileContainer>
-    </Viewport>
+      </Viewport>
+    </SProfileContainer>
   );
 };
