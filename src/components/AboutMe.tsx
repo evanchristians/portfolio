@@ -12,11 +12,11 @@ const SHeadingContainer = styled.div`
   justify-content: space-between;
   width: min(24rem, 100%);
   margin: 0 auto;
-  padding: 3rem 0 0;
+  padding: 3rem 0 1rem;
 `;
 
 const SHeading = styled.h2<any>`
-  font-size: 26px;
+  font-size: clamp(26px, 2vw, 36px);
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   font-weight: 900;
   padding: 0 0.25rem;

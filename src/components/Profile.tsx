@@ -7,7 +7,7 @@ import { Theme } from "../types";
 const SProfileContainer = styled.div`
   display: flex;
   position: relative;
-  width: clamp(min(18rem, 100%), 30vw, 32rem);
+  width: clamp(min(18rem, 100%), 100%, 32rem);
   overflow: hidden;
   margin: 0;
   div {
