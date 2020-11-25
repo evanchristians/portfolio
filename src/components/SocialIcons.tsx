@@ -7,14 +7,14 @@ const SSocialIcons = styled.ul`
   list-style: none;
   position: absolute;
   top: 50%;
-  right: 0.5rem;
+  right: 1rem;
   opacity: 0;
   transform: translateY(-50%) translateX(6rem) skewX(45deg);
   transition: all 1s
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo} 0.5s;
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    right: 3rem;
+    right: 2.5rem;
   }
 
   &.in-view {

@@ -3,6 +3,7 @@ import { Viewport } from "react-is-in-viewport";
 import styled from "styled-components";
 import { sleep } from "../lib/sleep";
 import { Theme } from "../types";
+import {Profile} from "./Profile"
 
 const SHeadingContainer = styled.div`
   display: flex;
@@ -10,14 +11,14 @@ const SHeadingContainer = styled.div`
   justify-content: space-between;
   width: min(24rem, 100%);
   margin-left: auto;
-  padding: 3rem 0;
+  padding: 3rem 0 0;
 `;
 
 const SHeading = styled.h2<any>`
   font-size: 26px;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   font-weight: 900;
-  padding: 0 .25rem;
+  padding: 0 0.25rem;
   position: relative;
   white-space: nowrap;
   color: ${(props) =>
@@ -95,6 +96,7 @@ export const AboutMe: React.FC<IAboutMe> = () => {
           About Me
         </SHeading>
       </SHeadingContainer>
+      <Profile />
     </Viewport>
   );
 };

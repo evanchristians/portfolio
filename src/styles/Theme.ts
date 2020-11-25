@@ -3,12 +3,14 @@ export const theme = {
     grey: "#2A2E32",
     greyLighter: "#ffffff4f",
     greyLightest: "#666",
-    background: "#D86D2D",
+    background: "#E15C56",
+    mainDarker: "#C5445E",
     compliment: "#930077",
     primary: "#fff",
     white: "#fff",
     warning: "#F2C744",
     black: "#202020",
+    shadow: "#01010155"
   },
   fonts: {
     headings: "'Work Sans', sans-serif",

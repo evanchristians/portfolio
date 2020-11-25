@@ -12,7 +12,7 @@ const STitle = styled.h1<any>`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  font-size: clamp(45px, 8vw, 136px);
+  font-size: clamp(54px, 10vw, 144px);
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   line-height: 0.9;

@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { Theme } from "../types";
 
 const SHome = styled.a`
-  width: 30px;
-  height: 30px;
+  position: relative;
+  line-height: 0.75;
+  padding: 0.75rem;
   display: flex;
   border: 1px solid ${({ theme }: { theme: Theme }) => theme.colors.primary};
   font-size: 14px;
@@ -15,8 +16,27 @@ const SHome = styled.a`
   transition: all 400ms
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
 
+  &:after {
+    z-index: -1;
+    content: "";
+    background: ${({ theme }: { theme: Theme }) => theme.colors.white};
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 400ms
+      ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
+  }
+
   &:hover {
-    color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
+    color: ${({ theme }: { theme: Theme }) => theme.colors.background};
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
   }
 `;
 
@@ -91,23 +111,21 @@ interface INavBar {}
 export const NavBar: React.FC<INavBar> = () => {
   return (
     <SNavBar>
-      <SHome>
-        E
-      </SHome>
+      <SHome>E</SHome>
       <ul className="nav">
         <li>
           <a href="">
-            <span>01</span> about
+            <span>01 &mdash;</span> about
           </a>
         </li>
         <li>
           <a href="">
-            <span>02</span> work
+            <span>02 &mdash;</span> work
           </a>
         </li>
         <li>
           <a href="">
-            <span>03</span> projects
+            <span>03 &mdash;</span> projects
           </a>
         </li>
       </ul>
