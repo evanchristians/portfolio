@@ -75,7 +75,7 @@ const Index: React.FC<IIndex> = () => {
               <strong>full stack</strong> web development and strong interests
               in <strong>experience design</strong> and{" "}
               <strong>seamless integration</strong>. */}
-              I Build Things & I Love It.
+              I Build Websites & Stuff.
             </SubText>
           </Viewport>
         </Wrapper>
