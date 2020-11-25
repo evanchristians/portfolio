@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     font-family: ${({ theme }) => theme.fonts.body};
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   *, ::before, ::after {
     box-sizing: border-box;

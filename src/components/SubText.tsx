@@ -13,7 +13,7 @@ const SSubText = styled.p<any>`
   font-weight: 500;
   opacity: 0;
   line-height: 1.1;
-  margin: 0 0 0 4px;
+  margin: 0 0 2rem 4px;
   max-width: 48rem;
   padding: 1rem 2rem 1rem 0;
   transform: translateY(25px) skewY(4deg);

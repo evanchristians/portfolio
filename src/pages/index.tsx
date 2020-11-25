@@ -3,9 +3,9 @@ import { Viewport } from "react-is-in-viewport";
 import { AboutMe } from "../components/AboutMe";
 import { Container } from "../components/Container";
 import { DownArrow } from "../components/DownArrow";
-import { Fixed } from "../components/Fixed";
 import { NavBar } from "../components/NavBar";
 import { Page } from "../components/Page";
+import { ResumeLink } from "../components/ResumeLink";
 import { SocialIcons } from "../components/SocialIcons";
 import { SubText } from "../components/SubText";
 import { Title } from "../components/Title";
@@ -47,11 +47,9 @@ const Index: React.FC<IIndex> = () => {
           setFixedIsIn(true);
         }}
       >
-        <Fixed>
-          <SocialIcons inView={fixedIsIn} />
-          <UpArrow show={showUpArrow} />
-          <DownArrow show={showDownArrow} />
-        </Fixed>
+        <SocialIcons inView={fixedIsIn} />
+        <UpArrow show={showUpArrow} />
+        <DownArrow show={showDownArrow} />
       </Viewport>
       <NavBar />
       <Page>
@@ -77,6 +75,7 @@ const Index: React.FC<IIndex> = () => {
               <strong>seamless integration</strong>. */}
               I Build Websites & Stuff.
             </SubText>
+            <ResumeLink />
           </Viewport>
         </Wrapper>
       </Page>

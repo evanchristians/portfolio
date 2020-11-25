@@ -5,7 +5,7 @@ const SSocialIcons = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   right: .5rem;
   opacity: 0;
