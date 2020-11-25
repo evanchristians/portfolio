@@ -99,13 +99,26 @@ export const AboutMe: React.FC<IAboutMe> = () => {
       </SHeadingContainer>
       <Flex>
         <Profile />
-        <p>
-          I'm a <strong>Cape Town</strong> based{" "}
-          <strong>software engineer</strong> with experience in{" "}
-          <strong>full stack</strong> web development and strong interests in{" "}
-          <strong>experience design</strong> and{" "}
-          <strong>seamless integration</strong>.
-        </p>
+        <div>
+          <p>
+            I'm a <strong>Cape Town</strong> based{" "}
+            <strong>software engineer</strong> with experience in{" "}
+            <strong>full stack</strong> web development and strong interests in{" "}
+            <strong>experience design</strong> and{" "}
+            <strong>seamless integration</strong>.
+            <br />
+          </p>
+          <p>
+            I learnt to write code at a{" "}
+            <strong>Web Development Bootcamp</strong> run by{" "}
+            <strong>Salesian's Life Choices</strong> &{" "}
+            <strong>CodeSpace</strong>, where I was taught the basics of{" "}
+            <strong>Full Stack Web Development</strong> in{" "}
+            <strong>HTML5</strong>, <strong>CSS3</strong>,{" "}
+            <strong>JavaScript (ES6)</strong>, <strong>PHP7</strong> &{" "}
+            <strong>MySQL</strong>
+          </p>
+        </div>
       </Flex>
     </Viewport>
   );

@@ -15,7 +15,7 @@ const SFlex = styled.div`
 
   p {
     max-width: 30rem;
-    padding: 3rem;
+    padding: 1rem;
     line-height: 1.6;
   }
 `;
