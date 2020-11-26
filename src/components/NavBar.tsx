@@ -125,9 +125,9 @@ export const NavBar: React.FC<INavBar> = () => {
   return (
     <SNavBar>
       <SHome href="#home">E</SHome>
-      <p>
+      {/* <p>
         <i className="fas fa-exclamation-triangle"></i> work in progress...
-      </p>
+      </p> */}
       <ul className="nav">
         <li>
           <a href="#about">
