@@ -30,7 +30,7 @@ z-index: 1;
     width: 100%;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 400ms
+    transition: transform 500ms
       ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
   }
 
