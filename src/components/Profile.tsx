@@ -36,6 +36,7 @@ const SProfileContainer = styled.div`
 const SProfileImage = styled.img<any>`
   display: block;
   width: 100%;
+  height: auto;
   opacity: ${(props) => (!props.isInView ? "0" : "1")};
   transform: ${(props) => (!props.isInView ? "scale(1.1) translateY(1rem)" : "scale(1)")};
   transition: opacity 0ms 400ms,
@@ -72,6 +73,8 @@ export const Profile: React.FC<IProfile> = () => {
         }}
       >
         <SProfileImage
+          width="512"
+          height="512"
           isInView={isInView}
           src="img/me.png"
           alt="Evan Christians, Full Stack Developer"
