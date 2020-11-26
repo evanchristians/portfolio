@@ -91,7 +91,7 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
           href="https://github.com/evanchristians"
           target="_blank"
         >
-          <i className="devicon-github-plain"></i>
+          <i className="fab fa-github"></i>
         </SSocialIconLink>
       </li>
       <li>
