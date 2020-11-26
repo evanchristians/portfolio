@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
         styles: (
           <>
             <head>
+              <title>work in progress...</title>
               <link rel="preconnect" href="https://fonts.gstatic.com" />
               <link
                 href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Work+Sans:wght@900&display=swap"

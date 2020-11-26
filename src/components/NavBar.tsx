@@ -54,6 +54,19 @@ const SNavBar = styled.nav`
     padding: 1rem 2rem;
   }
 
+  p {
+    font-size: 14px;
+    margin-left: 2rem;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 10px;
+      margin-right: .5rem;
+    }
+  }
+
   .nav {
     padding: 0;
     display: flex;
@@ -112,6 +125,9 @@ export const NavBar: React.FC<INavBar> = () => {
   return (
     <SNavBar>
       <SHome href="#home">E</SHome>
+      <p>
+        <i className="fas fa-exclamation-triangle"></i> work in progress...
+      </p>
       <ul className="nav">
         <li>
           <a href="#about">
