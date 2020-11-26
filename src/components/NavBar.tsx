@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Theme } from "../types";
 
 const SHome = styled.a`
+  text-decoration: none;
   position: relative;
   line-height: 0.75;
   padding: 0.75rem;
@@ -12,7 +13,6 @@ const SHome = styled.a`
   justify-content: center;
   align-items: center;
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
-  cursor: pointer;
   transition: all 400ms
     ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
 
@@ -111,10 +111,10 @@ interface INavBar {}
 export const NavBar: React.FC<INavBar> = () => {
   return (
     <SNavBar>
-      <SHome>E</SHome>
+      <SHome href="#home">E</SHome>
       <ul className="nav">
         <li>
-          <a href="">
+          <a href="#about">
             <span>01 &mdash;</span> about
           </a>
         </li>

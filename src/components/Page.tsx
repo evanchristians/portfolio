@@ -6,8 +6,10 @@ const SPage = styled.section`
   flex-direction: column;
 `;
 
-interface IPage {}
+interface IPage {
+  id?: string;
+}
 
-export const Page: React.FC<IPage> = ({ children }) => {
-  return <SPage>{children}</SPage>;
+export const Page: React.FC<IPage> = ({ children, id }) => {
+  return <SPage id={id}>{children}</SPage>;
 };

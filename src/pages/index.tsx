@@ -52,7 +52,7 @@ const Index: React.FC<IIndex> = () => {
         <DownArrow show={showDownArrow} />
       </Viewport>
       <NavBar />
-      <Page>
+      <Page id="home">
         <Wrapper>
           <Viewport
             type="overlap"
@@ -68,18 +68,13 @@ const Index: React.FC<IIndex> = () => {
           >
             <Title offset={0} inView={titleIsIn} text="Evan Christians" />
             <SubText offset={0} inView={subTextIsIn}>
-              {/* I'm a <strong>Cape Town</strong> based{" "}
-              <strong>software engineer</strong> with experience in{" "}
-              <strong>full stack</strong> web development and strong interests
-              in <strong>experience design</strong> and{" "}
-              <strong>seamless integration</strong>. */}
               I Build Websites & Stuff.
             </SubText>
             <ResumeLink />
           </Viewport>
         </Wrapper>
       </Page>
-      <Page>
+      <Page id="about">
         <Wrapper>
           <AboutMe />
         </Wrapper>
