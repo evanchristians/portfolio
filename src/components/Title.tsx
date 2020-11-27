@@ -8,7 +8,7 @@ interface ITitle {
   offset?: number;
 }
 
-const STitle = styled.h1<any>`
+const STitle = styled.h2<any>`
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +53,7 @@ const SWord: any = styled.div`
 `;
 
 const SChar: any = styled.div`
-  transform: translate(-10px, 30px) rotate(15deg);
+  transform: translate(-10px, 40px) rotate(15deg);
   color: transparent;
   transition: color 100ms
       ${({ theme }: { theme: Theme }) => theme.easings.outBack},

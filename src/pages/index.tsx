@@ -66,6 +66,7 @@ const Index: React.FC<IIndex> = () => {
               setSubTextIsIn(false);
             }}
           >
+            <h1 style={{ display: "none" }}>Evan Christians</h1>
             <Title offset={0} inView={titleIsIn} text="Evan Christians" />
             <SubText offset={0} inView={subTextIsIn}>
               I Build Websites & Stuff.

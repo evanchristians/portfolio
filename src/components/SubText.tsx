@@ -10,7 +10,7 @@ interface ISubText {
 const SSubText = styled.p<any>`
   font-size: clamp(30px, 5vw, 54px);
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
-  font-weight: 500;
+  font-weight: 800;
   opacity: 0;
   line-height: 1.1;
   margin: 0 0 2rem 4px;

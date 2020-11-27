@@ -20,7 +20,7 @@ const SHeading = styled.h2<any>`
   align-items: flex-start;
   font-size: clamp(26px, 2vw, 36px);
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
-  font-weight: 900;
+  font-weight: 800;
   padding: 0 0.25rem;
   position: relative;
   white-space: nowrap;
