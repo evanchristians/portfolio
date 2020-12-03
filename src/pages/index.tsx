@@ -53,7 +53,7 @@ const Index: React.FC<IIndex> = () => {
       </Viewport>
       <NavBar />
       <Page id="home">
-        <Wrapper>
+        <Wrapper >
           <Viewport
             type="overlap"
             onEnter={async () => {
@@ -71,7 +71,7 @@ const Index: React.FC<IIndex> = () => {
             <SubText offset={0} inView={subTextIsIn}>
               I Build Things on the Internet.
             </SubText>
-            <ResumeLink />
+            {/* <ResumeLink /> */}
           </Viewport>
         </Wrapper>
       </Page>

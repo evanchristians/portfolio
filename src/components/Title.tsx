@@ -9,14 +9,17 @@ interface ITitle {
 }
 
 const STitle = styled.h2<any>`
+  max-width: 600px;
   position: relative;
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  font-size: clamp(54px, 10vw, 144px);
+  font-size: clamp(54px, 10vw, 120px);
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   line-height: 0.9;
   margin: 8rem 0 0.5rem;
+  margin-left: auto;
   padding: 1rem 2rem 1rem 0;
   transition: transform 10ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
