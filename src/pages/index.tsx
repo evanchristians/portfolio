@@ -69,7 +69,7 @@ const Index: React.FC<IIndex> = () => {
             <h1 style={{ display: "none" }}>Evan Christians</h1>
             <Title offset={0} inView={titleIsIn} text="Evan Christians" />
             <SubText offset={0} inView={subTextIsIn}>
-              I Build Websites & Stuff.
+              I Build Things on the Internet.
             </SubText>
             <ResumeLink />
           </Viewport>
