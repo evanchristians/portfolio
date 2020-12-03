@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
           <>
             <Html lang="en-us">
               <head>
-                <title>work in progress...</title>
+                <title>WIP | Evan Christians | Web Developer</title>
                 <meta
                   name="keywords"
                   content="

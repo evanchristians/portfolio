@@ -3,6 +3,7 @@ import { Viewport } from "react-is-in-viewport";
 import styled from "styled-components";
 import { sleep } from "../lib/sleep";
 import { Theme } from "../types";
+import Image from "next/image";
 
 const SProfileContainer = styled.div`
   display: flex;
@@ -33,14 +34,16 @@ const SProfileContainer = styled.div`
   }
 `;
 
-const SProfileImage = styled.img<any>`
+const SProfileImage = styled.div<any>`
   display: block;
   width: 100%;
   height: auto;
   opacity: ${(props) => (!props.isInView ? "0" : "1")};
-  transform: ${(props) => (!props.isInView ? "scale(1.1) translateY(1rem)" : "scale(1)")};
+  transform: ${(props) =>
+    !props.isInView ? "scale(1.1) translateY(1rem)" : "scale(1)"};
   transition: opacity 0ms 400ms,
-    transform 4s 500ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+    transform 4s 500ms
+      ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 `;
 
 interface IProfile {}
@@ -72,13 +75,14 @@ export const Profile: React.FC<IProfile> = () => {
           setIsInView(false);
         }}
       >
-        <SProfileImage
-          width="512"
-          height="512"
-          isInView={isInView}
-          src="img/me.png"
-          alt="Evan Christians, Full Stack Developer"
-        />
+        <SProfileImage width="512" height="512" isInView={isInView}>
+          <Image
+            alt="Evan Christians, Full Stack Developer"
+            src="/img/me.png"
+            width={512}
+            height={512}
+          ></Image>
+        </SProfileImage>
       </Viewport>
     </SProfileContainer>
   );
