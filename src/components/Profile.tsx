@@ -81,6 +81,7 @@ export const Profile: React.FC<IProfile> = () => {
             src="/img/me.png"
             width={512}
             height={512}
+            quality={100}
           ></Image>
         </SProfileImage>
       </Viewport>
