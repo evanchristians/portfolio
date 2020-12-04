@@ -89,4 +89,9 @@ const Index: React.FC<IIndex> = () => {
   );
 };
 
+export const getServerSideProps = async () => {
+  const data = null;
+  return { props: { data } };
+};
+
 export default Index;
