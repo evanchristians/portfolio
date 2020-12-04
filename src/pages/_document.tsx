@@ -21,7 +21,48 @@ export default class MyDocument extends Document {
           <>
             <Html lang="en-us">
               <head>
-                <title>WIP | Evan Christians | Web Developer</title>
+                <title>Evan Christians | Web Developer</title>
+                <meta name="title" content="Evan Christians | Web Developer" />
+                <meta
+                  name="description"
+                  content="Evan Christians, Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
+                />
+
+                <meta property="og:type" content="website" />
+                <meta
+                  property="og:url"
+                  content="https://evanchristians.co.za/"
+                />
+                <meta
+                  property="og:title"
+                  content="Evan Christians | Web Developer"
+                />
+                <meta
+                  property="og:description"
+                  content="Evan Christians, Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
+                />
+                <meta
+                  property="og:image"
+                  content="https://evanchristians.co.za/img/banner.png"
+                />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                  property="twitter:url"
+                  content="https://evanchristians.co.za/"
+                />
+                <meta
+                  property="twitter:title"
+                  content="Evan Christians | Web Developer"
+                />
+                <meta
+                  property="twitter:description"
+                  content="Evan Christians, Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
+                />
+                <meta
+                  property="twitter:image"
+                  content="https://evanchristians.co.za/img/banner.png"
+                />
                 <meta
                   name="keywords"
                   content="
@@ -47,10 +88,6 @@ export default class MyDocument extends Document {
                   town,
                   za
                 "
-                />
-                <meta
-                  name="description"
-                  content="Hi, my name is Evan Christians, I'm a Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
                 />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link
