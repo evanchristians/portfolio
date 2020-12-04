@@ -5,7 +5,7 @@ import { sleep } from "../lib/sleep";
 import { Theme } from "../types";
 import Image from "next/image";
 
-const SProfileContainer = styled.div`
+const SProfileContainer = styled.div<any>`
   display: flex;
   position: relative;
   width: clamp(min(18rem, 100%), 100%, 32rem);
@@ -14,8 +14,27 @@ const SProfileContainer = styled.div`
   div {
     width: 100%;
   }
+  /* &:before {
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid ${({ theme }: { theme: Theme }) => theme.colors.primary};
+    top: 0;
+    left: 0;
+    opacity: ${(props) => (!props.isInView ? "0" : "1")};
+    transition: opacity 0ms 300ms;
+    background: linear-gradient(
+      180deg,
+      transparent 75%,
+      transparent 70%,
+      ${({ theme }: { theme: Theme }) => theme.colors.background} 98%
+    );
+  } */
 
   &:after {
+    z-index: 3;
     content: "";
     width: 100%;
     height: 100%;
@@ -62,7 +81,10 @@ export const Profile: React.FC<IProfile> = () => {
       };
   }, [animateImage]);
   return (
-    <SProfileContainer className={animateImage ? "in" : undefined}>
+    <SProfileContainer
+      isInView={isInView}
+      className={animateImage ? "in" : undefined}
+    >
       <Viewport
         type="overlap"
         onEnter={async () => {

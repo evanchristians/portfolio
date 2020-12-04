@@ -19,7 +19,7 @@ const SFlex = styled.div`
   p {
     max-width: 30rem;
     line-height: 1.6;
-    transform: translateY(3rem) skewY(4deg);
+    transform: translateY(3rem) rotate(4deg);
     opacity: 0;
     transition: transform 2s
         ${({ theme }: { theme: Theme }) => theme.easings.outQuint} 400ms,
@@ -38,6 +38,12 @@ const SFlex = styled.div`
     p {
       opacity: 1;
       transform: translateY(0);
+      &:nth-child(2) {
+        transition-delay: 700ms
+      }
+      &:nth-child(3) {
+        transition-delay: 1000ms
+      }
     }
   }
 `;
