@@ -48,7 +48,7 @@ const SNavBar = styled.nav`
   align-items: center;
   width: 100%;
   position: fixed;
-  padding: 0 0.5rem;
+  padding: 1rem;
   top: 0;
   left: 0;
 
@@ -70,17 +70,22 @@ const SNavBar = styled.nav`
   }
 
   .nav {
-    padding: 0;
     display: flex;
     justify-self: flex-end;
     list-style-type: none;
     margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 
     li {
-      margin-left: 1.5rem;
+      display: none;
+      margin-left: 1rem;
+      /* background: ${({ theme }: { theme: Theme }) => theme.colors.background}; */
 
       ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
         margin-left: 2.5rem;
+      display: block;
+
       }
     }
     a {
@@ -90,6 +95,8 @@ const SNavBar = styled.nav`
       font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body};
       font-weight: 400;
       position: relative;
+      display: block;
+      padding: .2rem;
 
       &:after {
         content: "";
