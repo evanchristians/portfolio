@@ -18,13 +18,15 @@ const SFlex = styled.div`
 
   p {
     max-width: 30rem;
-    padding: 1rem;
     line-height: 1.6;
     transform: translateY(3rem) skewY(4deg);
     opacity: 0;
     transition: transform 2s
         ${({ theme }: { theme: Theme }) => theme.easings.outQuint} 400ms,
       opacity 500ms ease 400ms;
+    ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+      padding: 1rem;
+    }
   }
 
   &.in {
