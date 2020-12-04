@@ -69,17 +69,14 @@ const SWord: any = styled.div`
 const SChar: any = styled.div`
   transform: translate(-10px, 50px) rotate(15deg);
   color: transparent;
-  filter: blur(4px);
   transition: color 100ms
       ${({ theme }: { theme: Theme }) => theme.easings.outBack},
-    transform 200ms ${({ theme }: { theme: Theme }) => theme.easings.outBack},
-    filter 100ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
+    transform 200ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
 
   &.in {
     filter: none;
     color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
     transform: none;
-    filter: none;
     transition-delay: ${(props) => 100 + (props as any).delay}ms;
   }
 `;
