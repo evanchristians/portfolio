@@ -5,6 +5,7 @@ const SSocialIcons = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
+  display: none;
   position: fixed;
   top: 50%;
   right: .5rem;
@@ -15,6 +16,7 @@ const SSocialIcons = styled.ul`
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     right: 2.5rem;
+    display: block;
   }
 
   &.in-view {

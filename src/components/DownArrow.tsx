@@ -4,6 +4,7 @@ import { Theme } from "../types";
 const SDownArrow = styled.i<IDownArrow>`
   font-size: 12px;
   position: fixed;
+  display: none;
   left: 1rem;
   bottom: 2rem;
   color: ${(props) =>
@@ -12,6 +13,7 @@ const SDownArrow = styled.i<IDownArrow>`
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     left: 2.6rem;
+    display: block;
   }
 
   &:after {

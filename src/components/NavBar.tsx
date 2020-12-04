@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Theme } from "../types";
 
 const SHome = styled.a`
+  z-index: 1;
   text-decoration: none;
   position: relative;
   line-height: 0.75;
@@ -11,6 +12,7 @@ const SHome = styled.a`
   font-size: 14px;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   justify-content: center;
+  background: ${({ theme }: { theme: Theme }) => theme.colors.background};
   align-items: center;
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   transition: all 400ms
@@ -63,7 +65,7 @@ const SNavBar = styled.nav`
 
     i {
       font-size: 10px;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 
@@ -112,8 +114,13 @@ const SNavBar = styled.nav`
       }
 
       span {
+        display: none;
         color: ${({ theme }: { theme: Theme }) => theme.colors.greyLighter};
         transition: color 100ms;
+
+        ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+          display: inline;
+        }
       }
     }
   }
@@ -125,9 +132,6 @@ export const NavBar: React.FC<INavBar> = () => {
   return (
     <SNavBar>
       <SHome href="#home">E</SHome>
-      {/* <p>
-        <i className="fas fa-exclamation-triangle"></i> work in progress...
-      </p> */}
       <ul className="nav">
         <li>
           <a href="#about">

@@ -5,6 +5,7 @@ const SUpArrow = styled.i<IUpArrow>`
   font-size: 12px;
   position: fixed;
   left: 1rem;
+  display: none;
   top: 6rem;
   color: ${(props) =>
     (props as any).show ? props.theme.colors.primary : "transparent"};
@@ -12,6 +13,7 @@ const SUpArrow = styled.i<IUpArrow>`
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     left: 2.6rem;
+    display: block;
   }
 
   &:after {
