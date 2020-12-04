@@ -12,20 +12,27 @@ const STitle = styled.h2<any>`
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem 0;
   font-size: clamp(54px, 10vw, 144px);
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   line-height: 0.9;
-  margin: 8rem 0 0.5rem;
-  padding: 1rem 2rem 1rem 0;
+  margin: -2rem 0 0.5rem;
   transition: transform 10ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   transform: translateY(
     -${(props) => Math.floor((props as any).offset * 0.05)}px
   );
 
+  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+    justify-content: flex-start;
+    padding: 1rem 2rem 1rem 0;
+  }
+
   &:after {
     content: "";
+    display: none;
     position: absolute;
     left: 5px;
     bottom: 0;
@@ -37,6 +44,10 @@ const STitle = styled.h2<any>`
     transform-origin: left;
     transition: transform 100ms
       ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
+
+    ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+      display: block;
+    }
   }
 
   &.in-view {
@@ -50,6 +61,9 @@ const STitle = styled.h2<any>`
 
 const SWord: any = styled.div`
   display: flex;
+  ${({ theme }: { theme: Theme }) => theme.sizes.xs} {
+    margin-right: 1rem;
+  }
 `;
 
 const SChar: any = styled.div`
@@ -86,7 +100,7 @@ export const Title: React.FC<ITitle & DOMAttributes<HTMLDivElement>> = ({
               </SChar>
             );
           })}
-          <span>&nbsp;</span>
+          {/* <span>&nbsp;</span> */}
         </SWord>
       ))}
     </STitle>

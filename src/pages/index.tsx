@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Viewport } from "react-is-in-viewport";
 import { AboutMe } from "../components/AboutMe";
+import { AboveHeading } from "../components/AboveHeading";
 import { Container } from "../components/Container";
 import { DownArrow } from "../components/DownArrow";
+import { HeadingContainer } from "../components/HeadingContainer";
 import { NavBar } from "../components/NavBar";
 import { Page } from "../components/Page";
 import { ResumeLink } from "../components/ResumeLink";
@@ -66,12 +68,15 @@ const Index: React.FC<IIndex> = () => {
               setSubTextIsIn(false);
             }}
           >
-            <h1 style={{ display: "none" }}>Evan Christians</h1>
-            <Title offset={0} inView={titleIsIn} text="Evan Christians" />
-            <SubText offset={0} inView={subTextIsIn}>
-              I Build Things on the Internet.
-            </SubText>
-            <ResumeLink />
+            <HeadingContainer>
+              <h1 style={{ display: "none" }}>Evan Christians</h1>
+              <AboveHeading />
+              <Title offset={0} inView={titleIsIn} text="Evan Christians" />
+              <SubText offset={0} inView={subTextIsIn}>
+                & I Build Things on the Internet.
+              </SubText>
+              <ResumeLink />
+            </HeadingContainer>
           </Viewport>
         </Wrapper>
       </Page>
