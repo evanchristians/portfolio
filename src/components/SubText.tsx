@@ -12,7 +12,7 @@ const SSubText = styled.p<any>`
   font-size: clamp(30px, 5vw, 54px);
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   font-weight: 800;
-  opacity: 0;
+  color: transparent;
   line-height: 1.1;
   margin: 0 0 2rem 4px;
   padding: 0;
@@ -35,7 +35,7 @@ const SSubText = styled.p<any>`
   }
 
   &.in-view {
-    opacity: 0.7;
+    color: ${({ theme }: { theme: Theme }) => theme.colors.primaryTransparent};
     transform: none;
     transition-duration: 1.5s;
   }

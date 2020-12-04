@@ -4,16 +4,16 @@ import styled from "styled-components";
 import { Theme } from "../types";
 
 const SHeading = styled.h3<any>`
+  margin-top: 0;
   display: inline-flex;
   align-items: flex-start;
   font-size: clamp(26px, 1.5vw, 36px);
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   font-weight: 800;
   position: relative;
-  opacity: .7;
   white-space: nowrap;
   color: ${(props) =>
-    !props.isInView ? "transparent" : props.theme.colors.primary};
+    !props.isInView ? "transparent" : props.theme.colors.primaryTransparent};
   transition: color 0ms 200ms;
 
   &:after {

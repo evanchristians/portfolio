@@ -7,6 +7,7 @@ export const theme = {
     mainDarker: "#C5445E",
     compliment: "#930077",
     primary: "#eee",
+    primaryTransparent: "#eeeeeeaa",
     white: "#eee",
     warning: "#F2C744",
     black: "#202020",
