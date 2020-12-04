@@ -1,9 +1,9 @@
 export const theme = {
   colors: {
     grey: "#2A2E32",
-    greyLighter: "#eeeeee4f",
+    greyLighter: "#eeeeeeaf",
     greyLightest: "#666",
-    background: "#563DF5",
+    background: "#5130E0",
     mainDarker: "#C5445E",
     compliment: "#930077",
     primary: "#eee",
@@ -14,7 +14,7 @@ export const theme = {
   },
   fonts: {
     headings: "'Work Sans', sans-serif",
-    body: "'Montserrat', sans-serif",
+    body: "'JetBrains Mono', monospace",
   },
   sizes: {
     xs: "@media(min-width: 480px)",

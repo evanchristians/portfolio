@@ -5,11 +5,12 @@ import { sleep } from "../lib/sleep";
 import { Theme } from "../types";
 
 const SResumeLink = styled.a`
-z-index: 1;
+  z-index: 1;
   position: relative;
   display: flex;
   align-items: center;
   width: fit-content;
+  margin: 0 auto;
   padding: 1rem;
   text-decoration: none;
   opacity: 0;
@@ -49,6 +50,10 @@ z-index: 1;
 
   &.in {
     opacity: 1;
+  }
+
+  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+    margin: 0;
   }
 `;
 

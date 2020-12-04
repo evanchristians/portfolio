@@ -4,9 +4,7 @@ import styled from "styled-components";
 import { Theme } from "../types";
 
 const SHeading = styled.h3<any>`
-  margin-top: 8rem;
   display: inline-flex;
-  margin-left: 4px;
   align-items: flex-start;
   font-size: clamp(26px, 1.5vw, 36px);
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
@@ -35,6 +33,10 @@ const SHeading = styled.h3<any>`
     transform: scaleX(1);
     transform-origin: left;
   }
+
+  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+    margin-left: 4px;
+  }
 `;
 
 interface IAboveHeading {}
@@ -46,7 +48,7 @@ export const AboveHeading: React.FC<IAboveHeading> = () => {
   useEffect(() => {
     let sleep = setTimeout(() => {
       setAnimateHeading(false);
-    }, 250);
+    }, 300);
     if (!animateHeading)
       return () => {
         clearTimeout(sleep);

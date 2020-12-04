@@ -56,19 +56,19 @@ const Index: React.FC<IIndex> = () => {
       <NavBar />
       <Page id="home">
         <Wrapper>
-          <Viewport
-            type="overlap"
-            onEnter={async () => {
-              setTitleIsIn(true);
-              await sleep(500);
-              setSubTextIsIn(true);
-            }}
-            onLeave={() => {
-              setTitleIsIn(false);
-              setSubTextIsIn(false);
-            }}
-          >
-            <HeadingContainer>
+          <HeadingContainer>
+            <Viewport
+              type="overlap"
+              onEnter={async () => {
+                setTitleIsIn(true);
+                await sleep(500);
+                setSubTextIsIn(true);
+              }}
+              onLeave={() => {
+                setTitleIsIn(false);
+                setSubTextIsIn(false);
+              }}
+            >
               <h1 style={{ display: "none" }}>Evan Christians</h1>
               <AboveHeading />
               <Title offset={0} inView={titleIsIn} text="Evan Christians" />
@@ -76,8 +76,8 @@ const Index: React.FC<IIndex> = () => {
                 & I Build Things on the Internet.
               </SubText>
               <ResumeLink />
-            </HeadingContainer>
-          </Viewport>
+            </Viewport>
+          </HeadingContainer>
         </Wrapper>
       </Page>
       <Page id="about">

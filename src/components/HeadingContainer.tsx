@@ -4,12 +4,14 @@ import { Theme } from "../types";
 const SHeadingContainer = styled.main`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   background: ${({ theme }: { theme: Theme }) => theme.colors.background};
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    align-items: flex-start;
+    text-align: left;
   }
 `;
 

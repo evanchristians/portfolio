@@ -14,7 +14,7 @@ const STitle = styled.h2<any>`
   flex-wrap: wrap;
   justify-content: center;
   padding: 1rem 0;
-  font-size: clamp(54px, 10vw, 144px);
+  font-size: clamp(64px, 10vw, 144px);
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   line-height: 0.9;
