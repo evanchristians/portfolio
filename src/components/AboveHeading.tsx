@@ -18,17 +18,9 @@ const SHeading = styled.h3<any>`
     !props.isInView ? "transparent" : props.theme.colors.primary};
   transition: color 0ms 200ms;
 
-  span {
-    font-size: clamp(20px, 3vw, 36px);
-    margin-right: 0.5rem;
-    color: ${(props) =>
-      !props.isInView ? "transparent" : props.theme.colors.greyLighter};
-    transition: color 0ms 300ms;
-  }
-
   &:after {
     content: "";
-    width: 100%;
+    width: 105%;
     height: 100%;
     position: absolute;
     top: 0;

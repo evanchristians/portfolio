@@ -67,6 +67,7 @@ export const ResumeLink: React.FC<IResumeLink> = () => {
       }}
     >
       <SResumeLink
+        rel="noreferrer"
         className={isInView ? "in" : undefined}
         href="https://resume.evanchristians.co.za"
         target="_blank"

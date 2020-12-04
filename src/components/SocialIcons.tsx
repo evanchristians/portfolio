@@ -8,11 +8,11 @@ const SSocialIcons = styled.ul`
   display: none;
   position: fixed;
   top: 50%;
-  right: .5rem;
+  right: 0.5rem;
   opacity: 0;
   transform: translateY(-50%) translateX(6rem) skewX(45deg);
-  transition: all 1s
-    ${({ theme }: { theme: Theme }) => theme.easings.outExpo} 0.5s;
+  transition: all 1s ${({ theme }: { theme: Theme }) => theme.easings.outExpo}
+    0.5s;
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     right: 2.5rem;
@@ -26,6 +26,7 @@ const SSocialIcons = styled.ul`
 `;
 
 const SSocialIconLink = styled.a`
+  font-size: 0;
   cursor: pointer;
   display: flex;
   position: relative;
@@ -34,12 +35,15 @@ const SSocialIconLink = styled.a`
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
-  font-size: 16px;
   color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
   overflow: hidden;
   text-decoration: none;
   transition: color 200ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+
+  i {
+    font-size: 16px;
+  }
 
   &:before {
     z-index: -1;
@@ -53,7 +57,8 @@ const SSocialIconLink = styled.a`
     transform: scaleX(0);
     transform-origin: left;
     background-color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
-    transition: transform 400ms ${({ theme }: { theme: Theme }) => theme.easings.outExpo},
+    transition: transform 400ms
+        ${({ theme }: { theme: Theme }) => theme.easings.outExpo},
       opacity 800ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint}
         300ms;
   }
@@ -82,22 +87,31 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
     <SSocialIcons className={inView ? "in-view" : undefined}>
       <li>
         <SSocialIconLink
+          rel="noreferrer"
           href="https://www.linkedin.com/in/evanchristians/"
           target="_blank"
         >
+          linkedin
           <i className="fab fa-linkedin-in"></i>
         </SSocialIconLink>
       </li>
       <li>
         <SSocialIconLink
+          rel="noreferrer"
           href="https://github.com/evanchristians"
           target="_blank"
         >
+          github
           <i className="fab fa-github"></i>
         </SSocialIconLink>
       </li>
       <li>
-        <SSocialIconLink href="mailto:evanryk@gmail.com" target="_blank">
+        <SSocialIconLink
+          rel="noreferrer"
+          href="mailto:evanryk@gmail.com"
+          target="_blank"
+        >
+          email
           <i className="fas fa-at"></i>
         </SSocialIconLink>
       </li>

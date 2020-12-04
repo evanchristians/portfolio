@@ -29,6 +29,11 @@ const SFlex = styled.div`
     }
   }
 
+  a {
+    color: inherit;
+    font-weight: bold;
+  }
+
   &.in {
     p {
       opacity: 1;

@@ -120,6 +120,20 @@ export const AboutMe: React.FC<IAboutMe> = () => {
             <br />
           </p>
           <p>
+            I currently work as a <strong>Junior Developer</strong> at{" "}
+            <strong>Lima Bean</strong>, a{" "}
+            <strong>Digital Marketing Agency</strong> focused on providing{" "}
+            <strong>End-to-End</strong> digital solutions for enterprise
+            clients. <br />
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="http://limabean.agency/services"
+            >
+              Learn more about Lima Bean.
+            </a>
+          </p>
+          <p>
             I learnt to write code at a{" "}
             <strong>Web Development Bootcamp</strong> run by{" "}
             <strong>Salesian's Life Choices</strong> &{" "}

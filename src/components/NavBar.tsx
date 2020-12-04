@@ -146,12 +146,12 @@ export const NavBar: React.FC<INavBar> = () => {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <span>02 &mdash;</span> work
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="/">
             <span>03 &mdash;</span> projects
           </a>
         </li>
