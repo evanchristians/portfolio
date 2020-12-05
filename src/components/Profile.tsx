@@ -9,10 +9,8 @@ const SProfileContainer = styled.div<any>`
   display: flex;
   position: relative;
   width: clamp(min(18rem, 100%), 100%, 32rem);
-  /* border: 1px solid ${(props) => (props.isInView ? `${({ theme }: { theme: Theme }) => theme.colors.primary}` : "transparent")}; */
   overflow: hidden;
   margin: 0;
-  transition: border 0ms 400ms;
   div {
     width: 100%;
   }
@@ -37,9 +35,8 @@ const SProfileContainer = styled.div<any>`
 `;
 
 const SProfileImage = styled.div<any>`
-  display: block;
-  width: 100%;
-  height: auto;
+  display: flex;
+  background: #ffffff33;
   opacity: ${(props) => (!props.isInView ? "0" : "1")};
   transform: ${(props) =>
     !props.isInView ? "scale(1.1) translateY(1rem)" : "scale(1)"};
