@@ -90,12 +90,16 @@ export const Title: React.FC<ITitle & DOMAttributes<HTMLDivElement>> = ({
 
   return (
     <STitle offset={offset} className={inView ? "in-view" : ""}>
-      {text.split(" ").map((word) => (
-        <SWord>
-          {word.split("").map((char) => {
+      {text.split(" ").map((word, key) => (
+        <SWord key={key}>
+          {word.split("").map((char, key) => {
             position++;
             return (
-              <SChar delay={position * 45} className={inView ? "in" : ""}>
+              <SChar
+                delay={position * 45}
+                className={inView ? "in" : ""}
+                key={key}
+              >
                 {char}
               </SChar>
             );
