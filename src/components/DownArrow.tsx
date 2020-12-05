@@ -18,9 +18,12 @@ const SDownArrow = styled.i<IDownArrow>`
   }
 
   span {
+    font-weight: 400;
+    letter-spacing: 1px;
     position: absolute;
     writing-mode: vertical-rl;
-    transform: translateX(50%) rotate(180deg) ${(props) => (props.show ? "" : "translateY(2rem)")};
+    transform: translateX(50%) rotate(180deg)
+      ${(props) => (props.show ? "" : "translateY(2rem)")};
     right: 50%;
     bottom: 1.5rem;
     font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body};
