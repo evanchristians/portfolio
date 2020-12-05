@@ -9,30 +9,13 @@ const SProfileContainer = styled.div<any>`
   display: flex;
   position: relative;
   width: clamp(min(18rem, 100%), 100%, 32rem);
+  /* border: 1px solid ${(props) => (props.isInView ? `${({ theme }: { theme: Theme }) => theme.colors.primary}` : "transparent")}; */
   overflow: hidden;
   margin: 0;
+  transition: border 0ms 400ms;
   div {
     width: 100%;
   }
-  /* &:before {
-    z-index: 1;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border: 1px solid ${({ theme }: { theme: Theme }) => theme.colors.primary};
-    top: 0;
-    left: 0;
-    opacity: ${(props) => (!props.isInView ? "0" : "1")};
-    transition: opacity 0ms 300ms;
-    background: linear-gradient(
-      180deg,
-      transparent 75%,
-      transparent 70%,
-      ${({ theme }: { theme: Theme }) => theme.colors.background} 98%
-    );
-  } */
-
   &:after {
     z-index: 3;
     content: "";
@@ -100,7 +83,7 @@ export const Profile: React.FC<IProfile> = () => {
         <SProfileImage width="512" height="512" isInView={isInView}>
           <Image
             alt="Evan Christians, Full Stack Developer"
-            src="/img/me.png"
+            src="/img/me_transparent.png"
             width={512}
             height={512}
             quality={100}
