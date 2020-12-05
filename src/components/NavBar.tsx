@@ -52,10 +52,6 @@ const SNavBar = styled.nav`
   top: 0;
   left: 0;
 
-  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    padding: 1rem 2rem;
-  }
-
   p {
     font-size: 14px;
     margin-left: 2rem;

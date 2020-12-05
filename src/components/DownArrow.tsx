@@ -5,7 +5,7 @@ const SDownArrow = styled.i<IDownArrow>`
   font-size: 12px;
   position: fixed;
   display: none;
-  left: 3rem;
+  right: 3rem;
   transform: translateX(-50%)
     ${(props) => (props.show ? "" : "translateY(4rem)")};
   bottom: 5rem;
@@ -15,6 +15,11 @@ const SDownArrow = styled.i<IDownArrow>`
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     display: block;
+  }
+
+  ${({ theme }: { theme: Theme }) => theme.sizes.xl} {
+    left: 2rem;
+    right: unset;
   }
 
   span {

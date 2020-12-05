@@ -17,15 +17,20 @@ const SFlex = styled.div`
   }
 
   p {
-    max-width: 30rem;
+    max-width: 40rem;
     line-height: 1.6;
     transform: translateY(3rem) rotate(4deg);
     opacity: 0;
+    margin-top: 1rem;
+    padding: 1rem 0;
     transition: transform 2s
         ${({ theme }: { theme: Theme }) => theme.easings.outQuint} 400ms,
       opacity 500ms ease 400ms;
-    ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+
+    ${({ theme }: { theme: Theme }) => theme.sizes.md} {
+      margin-top: 0;
       padding: 1rem;
+      max-width: 30rem;
     }
   }
 
@@ -39,10 +44,10 @@ const SFlex = styled.div`
       opacity: 1;
       transform: translateY(0);
       &:nth-child(2) {
-        transition-delay: 600ms
+        transition-delay: 600ms;
       }
       &:nth-child(3) {
-        transition-delay: 800ms
+        transition-delay: 800ms;
       }
     }
   }
