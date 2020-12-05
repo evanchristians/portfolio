@@ -80,12 +80,23 @@ const SNavBar = styled.nav`
     li {
       display: none;
       margin-left: 1rem;
-      /* background: ${({ theme }: { theme: Theme }) => theme.colors.background}; */
-
       ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
         margin-left: 2.5rem;
-      display: block;
+        display: block;
+      }
 
+      &:not(:first-child) {
+        background: #ffffff1f;
+        opacity: 0.2;
+        cursor: not-allowed;
+
+        &:hover > a {
+          pointer-events: none;
+
+          &:after {
+            width: 0;
+          }
+        }
       }
     }
     a {
@@ -96,7 +107,7 @@ const SNavBar = styled.nav`
       font-weight: 400;
       position: relative;
       display: block;
-      padding: .2rem;
+      padding: 0.2rem;
 
       &:after {
         content: "";
