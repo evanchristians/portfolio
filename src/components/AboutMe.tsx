@@ -16,8 +16,9 @@ const SHeadingContainer = styled.div`
 `;
 
 const SHeading = styled.h2<any>`
+  line-height: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   font-size: clamp(26px, 2vw, 36px);
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   font-weight: 800;
@@ -27,16 +28,6 @@ const SHeading = styled.h2<any>`
   color: ${(props) =>
     !props.isInView ? "transparent" : props.theme.colors.primary};
   transition: color 0ms 500ms;
-
-  span {
-    /* font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body}; */
-    font-size: clamp(14px, 1vw, 18px);
-    /* font-weight: 400; */
-    margin-right: 0.5rem;
-    color: ${(props) =>
-      !props.isInView ? "transparent" : props.theme.colors.greyLighter};
-    transition: color 0ms 500ms;
-  }
 
   &:after {
     content: "";
@@ -100,6 +91,7 @@ export const AboutMe: React.FC<IAboutMe> = () => {
       }}
     >
       <SHeadingContainer>
+        <span>01</span>
         <SHeadingLead className={isInView ? "in" : undefined} />
         <SHeading
           isInView={isInView}

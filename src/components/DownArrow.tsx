@@ -6,8 +6,9 @@ const SDownArrow = styled.i<IDownArrow>`
   position: fixed;
   display: none;
   left: 3rem;
-  transform: translateX(-50%) ${(props) => props.show ? "" : "translateY(3rem)"};
-  bottom: 4rem;
+  transform: translateX(-50%)
+    ${(props) => (props.show ? "" : "translateY(4rem)")};
+  bottom: 5rem;
   color: ${(props) =>
     (props as any).show ? props.theme.colors.primary : "transparent"};
   transition: color 500ms, transform 500ms;
@@ -16,11 +17,22 @@ const SDownArrow = styled.i<IDownArrow>`
     display: block;
   }
 
+  span {
+    position: absolute;
+    writing-mode: vertical-rl;
+    transform: translateX(50%) rotate(180deg) ${(props) => (props.show ? "" : "translateY(2rem)")};
+    right: 50%;
+    bottom: 1.5rem;
+    font-family: ${({ theme }: { theme: Theme }) => theme.fonts.body};
+    font-size: 0.9rem;
+    transition: transform 500ms;
+  }
+
   &:after {
     content: "";
     position: absolute;
     background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
-    bottom: -4.5rem;
+    bottom: -5rem;
     left: 50%;
     transform: translateX(-1px);
     width: 1px;
@@ -35,5 +47,9 @@ interface IDownArrow {
 }
 
 export const DownArrow: React.FC<IDownArrow> = ({ show }) => {
-  return <SDownArrow show={show} className="fas fa-arrow-down" />;
+  return (
+    <SDownArrow show={show} className="fas fa-arrow-down">
+      <span>scroll</span>
+    </SDownArrow>
+  );
 };
