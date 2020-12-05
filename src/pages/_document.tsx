@@ -26,7 +26,7 @@ export default class MyDocument extends Document {
                 <meta name="title" content="Evan Christians | Web Developer" />
                 <meta
                   name="description"
-                  content="Evan Christians, Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
+                  content="I'm a Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
                 />
                 <meta property="og:type" content="website" />
                 <meta
@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
                 />
                 <meta
                   property="og:description"
-                  content="Evan Christians, Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
+                  content="I'm a Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
                 />
                 <meta
                   property="og:image"
@@ -57,7 +57,7 @@ export default class MyDocument extends Document {
                 />
                 <meta
                   property="twitter:description"
-                  content="Evan Christians, Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
+                  content="I'm a Cape Town based software engineer with experience in full stack web development and strong interests in experience design and seamless integration."
                 />
                 <meta
                   property="twitter:image"
