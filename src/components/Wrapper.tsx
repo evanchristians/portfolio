@@ -5,7 +5,7 @@ const SWrapper = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: min(1240px, 100%);
+  width: min(1260px, 100%);
   padding: 4rem 1.5rem;
   margin: 0 auto;
 

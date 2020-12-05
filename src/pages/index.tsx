@@ -11,7 +11,6 @@ import { ResumeLink } from "../components/ResumeLink";
 import { SocialIcons } from "../components/SocialIcons";
 import { SubText } from "../components/SubText";
 import { Title } from "../components/Title";
-import { UpArrow } from "../components/UpArrow";
 import { Wrapper } from "../components/Wrapper";
 import { onScroll } from "../lib/onScroll";
 import { sleep } from "../lib/sleep";
@@ -23,19 +22,12 @@ const Index: React.FC<IIndex> = () => {
   const [subTextIsIn, setSubTextIsIn] = useState(false);
   const [fixedIsIn, setFixedIsIn] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(0);
-  const [showUpArrow, setShowUpArrow] = useState(false);
   const [showDownArrow, setShowDownArrow] = useState(false);
 
   onScroll(setScrollOffset);
 
   useEffect(() => {
-    if (scrollOffset >= 30) {
-      setShowUpArrow(true);
-    } else {
-      setShowUpArrow(false);
-    }
-
-    if (scrollOffset <= window.innerHeight - 30) {
+    if (scrollOffset <= 50) {
       setShowDownArrow(true);
     } else {
       setShowDownArrow(false);
@@ -50,7 +42,6 @@ const Index: React.FC<IIndex> = () => {
         }}
       >
         <SocialIcons inView={fixedIsIn} />
-        <UpArrow show={showUpArrow} />
         <DownArrow show={showDownArrow} />
       </Viewport>
       <NavBar />

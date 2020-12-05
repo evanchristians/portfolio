@@ -5,14 +5,14 @@ const SDownArrow = styled.i<IDownArrow>`
   font-size: 12px;
   position: fixed;
   display: none;
-  left: 1rem;
-  bottom: 2rem;
+  left: 3rem;
+  transform: translateX(-50%) ${(props) => props.show ? "" : "translateY(3rem)"};
+  bottom: 4rem;
   color: ${(props) =>
     (props as any).show ? props.theme.colors.primary : "transparent"};
-  transition: color 500ms ${(props) => ((props as any).show ? "0ms" : "300ms")};
+  transition: color 500ms, transform 500ms;
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    left: 2.6rem;
     display: block;
   }
 
@@ -20,11 +20,11 @@ const SDownArrow = styled.i<IDownArrow>`
     content: "";
     position: absolute;
     background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
-    bottom: 1.5rem;
+    bottom: -4.5rem;
     left: 50%;
     transform: translateX(-1px);
     width: 1px;
-    height: ${(props) => ((props as any).show ? "7rem" : "0")};
+    height: ${(props) => ((props as any).show ? "4rem" : "0")};
     transition: height 700ms
       ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   }
