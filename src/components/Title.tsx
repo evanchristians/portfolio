@@ -53,7 +53,7 @@ const STitle = styled.h2<any>`
   &.in-view {
     &:after {
       transform: scaleX(1);
-      transition-duration: 800ms;
+      transition-duration: 1200ms;
       transition-delay: 500ms;
     }
   }
@@ -71,7 +71,7 @@ const SChar: any = styled.div`
   color: transparent;
   transition: color 100ms
       ${({ theme }: { theme: Theme }) => theme.easings.outBack},
-    transform 200ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
+    transform 300ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
 
   &.in {
     filter: none;

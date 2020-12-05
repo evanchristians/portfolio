@@ -26,7 +26,7 @@ const SHeading = styled.h3<any>`
     background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 400ms
+    transition: transform 600ms
       ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   }
   &.in::after {
@@ -48,7 +48,7 @@ export const AboveHeading: React.FC<IAboveHeading> = () => {
   useEffect(() => {
     let sleep = setTimeout(() => {
       setAnimateHeading(false);
-    }, 300);
+    }, 400);
     if (!animateHeading)
       return () => {
         clearTimeout(sleep);
