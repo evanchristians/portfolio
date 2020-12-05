@@ -64,7 +64,7 @@ const Index: React.FC<IIndex> = () => {
               <AboveHeading />
               <Title offset={0} inView={titleIsIn} text="Evan Christians" />
               <SubText offset={0} inView={subTextIsIn}>
-                & I Build Things on the Internet.
+                & I Build Things on the Web.
               </SubText>
               <ResumeLink />
             </Viewport>
