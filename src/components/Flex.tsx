@@ -39,10 +39,10 @@ const SFlex = styled.div`
       opacity: 1;
       transform: translateY(0);
       &:nth-child(2) {
-        transition-delay: 700ms
+        transition-delay: 600ms
       }
       &:nth-child(3) {
-        transition-delay: 1000ms
+        transition-delay: 800ms
       }
     }
   }
