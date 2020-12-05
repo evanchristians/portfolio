@@ -81,8 +81,8 @@ export const Profile: React.FC<IProfile> = () => {
           <Image
             alt="Evan Christians, Full Stack Developer"
             src="/img/me_transparent.png"
-            width={512}
-            height={512}
+            width={600}
+            height={600}
             quality={100}
           ></Image>
         </SProfileImage>

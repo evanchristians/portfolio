@@ -12,12 +12,12 @@ const SFlex = styled.div`
 
   ${({ theme }: { theme: Theme }) => theme.sizes.md} {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
   p {
-    max-width: 40rem;
+    flex-grow: 1;
     line-height: 1.6;
     transform: translateY(3rem) rotate(4deg);
     opacity: 0;
@@ -30,7 +30,7 @@ const SFlex = styled.div`
     ${({ theme }: { theme: Theme }) => theme.sizes.md} {
       margin-top: 0;
       padding: 1rem;
-      max-width: 30rem;
+      max-width: 36rem;
     }
   }
 

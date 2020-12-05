@@ -5,7 +5,7 @@ const SDownArrow = styled.i<IDownArrow>`
   font-size: 12px;
   position: fixed;
   display: none;
-  right: 3rem;
+  right: 1.4rem;
   transform: translateX(-50%)
     ${(props) => (props.show ? "" : "translateY(4rem)")};
   bottom: 5rem;

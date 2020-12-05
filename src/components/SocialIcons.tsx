@@ -15,7 +15,7 @@ const SSocialIcons = styled.ul`
     0.5s;
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    right: 2.5rem;
+    right: 1rem;
     display: block;
   }
 
