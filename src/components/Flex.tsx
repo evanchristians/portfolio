@@ -19,7 +19,7 @@ const SFlex = styled.div`
   p {
     flex-grow: 1;
     line-height: 1.6;
-    transform: translateY(3rem) rotate(4deg);
+    transform: translateX(3rem) skew(4deg);
     opacity: 0;
     margin-top: 1rem;
     padding: 1rem 0;

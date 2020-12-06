@@ -22,7 +22,6 @@ const Index: React.FC<IIndex> = () => {
   const [fixedIsIn, setFixedIsIn] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(0);
   const [showDownArrow, setShowDownArrow] = useState(false);
-
   const handleScroll = () => setScrollOffset(window.pageYOffset);
 
   useEffect(() => {
@@ -30,6 +29,7 @@ const Index: React.FC<IIndex> = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   useEffect(() => {
     if (scrollOffset <= 50) {
@@ -67,7 +67,11 @@ const Index: React.FC<IIndex> = () => {
             >
               <h1 style={{ display: "none" }}>Evan Christians</h1>
               <AboveHeading />
-              <Title offset={scrollOffset} inView={titleIsIn} text="Evan Christians" />
+              <Title
+                offset={scrollOffset}
+                inView={titleIsIn}
+                text="Evan Christians"
+              />
               <SubText offset={scrollOffset} inView={subTextIsIn}>
                 & I Build Things on the Web.
               </SubText>
@@ -78,7 +82,7 @@ const Index: React.FC<IIndex> = () => {
       </Page>
       <Page id="about">
         <Wrapper>
-          <AboutMe />
+          <AboutMe offset={scrollOffset}/>
         </Wrapper>
       </Page>
     </Container>

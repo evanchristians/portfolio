@@ -63,9 +63,11 @@ const SHeadingLead = styled.div`
   }
 `;
 
-interface IAboutMe {}
+interface IAboutMe {
+  offset: any;
+}
 
-export const AboutMe: React.FC<IAboutMe> = () => {
+export const AboutMe: React.FC<IAboutMe> = ({ offset }) => {
   const [isInView, setIsInView] = useState(false);
   const [animateHeading, setAnimateHeading] = useState(false);
 
@@ -101,7 +103,7 @@ export const AboutMe: React.FC<IAboutMe> = () => {
         </SHeading>
       </SHeadingContainer>
       <Flex>
-        <Profile />
+        <Profile offset={offset} />
         <div>
           <p>
             I'm a <strong>Cape Town</strong> based{" "}

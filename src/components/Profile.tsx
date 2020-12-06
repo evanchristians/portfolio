@@ -36,18 +36,29 @@ const SProfileContainer = styled.div<any>`
 
 const SProfileImage = styled.div<any>`
   display: flex;
-  background: ${({ theme }: { theme: Theme }) => theme.colors.primaryTransparent};
+  background: ${({ theme }: { theme: Theme }) =>
+    theme.colors.primaryTransparent};
   opacity: ${(props) => (!props.isInView ? "0" : "1")};
   transform: ${(props) =>
-    !props.isInView ? "scale(1.1) translateY(1rem)" : "scale(1)"};
+    !props.isInView ? "scale(1.2) translateY(1rem)" : "scale(1.1)"};
   transition: opacity 0ms 400ms,
     transform 4s 500ms
       ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+
+  img {
+    transform: translateY(
+      calc(${(props) => Math.floor(props.offset) * 0.08}px - 65px)
+    );
+    transition: transform 300ms
+      ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+  }
 `;
 
-interface IProfile {}
+interface IProfile {
+  offset: any;
+}
 
-export const Profile: React.FC<IProfile> = () => {
+export const Profile: React.FC<IProfile> = ({ offset }) => {
   const [isInView, setIsInView] = useState(false);
   const [animateImage, setAnimateImage] = useState(false);
 
@@ -77,7 +88,12 @@ export const Profile: React.FC<IProfile> = () => {
           setIsInView(false);
         }}
       >
-        <SProfileImage width="512" height="512" isInView={isInView}>
+        <SProfileImage
+          width="512"
+          height="512"
+          isInView={isInView}
+          offset={offset}
+        >
           <Image
             alt="Evan Christians, Full Stack Developer"
             src="/img/me_transparent.png"
