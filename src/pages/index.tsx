@@ -12,7 +12,6 @@ import { SocialIcons } from "../components/SocialIcons";
 import { SubText } from "../components/SubText";
 import { Title } from "../components/Title";
 import { Wrapper } from "../components/Wrapper";
-import { onScroll } from "../lib/onScroll";
 import { sleep } from "../lib/sleep";
 
 interface IIndex {}
@@ -24,7 +23,13 @@ const Index: React.FC<IIndex> = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
   const [showDownArrow, setShowDownArrow] = useState(false);
 
-  onScroll(setScrollOffset);
+  const handleScroll = () => setScrollOffset(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (scrollOffset <= 50) {
@@ -62,8 +67,8 @@ const Index: React.FC<IIndex> = () => {
             >
               <h1 style={{ display: "none" }}>Evan Christians</h1>
               <AboveHeading />
-              <Title offset={0} inView={titleIsIn} text="Evan Christians" />
-              <SubText offset={0} inView={subTextIsIn}>
+              <Title offset={scrollOffset} inView={titleIsIn} text="Evan Christians" />
+              <SubText offset={scrollOffset} inView={subTextIsIn}>
                 & I Build Things on the Web.
               </SubText>
               <ResumeLink />

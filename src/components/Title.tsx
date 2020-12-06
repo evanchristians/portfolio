@@ -19,11 +19,6 @@ const STitle = styled.h2<any>`
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   line-height: 0.9;
   margin: -2rem 0 0.5rem;
-  transition: transform 10ms
-    ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
-  transform: translateY(
-    -${(props) => Math.floor((props as any).offset * 0.05)}px
-  );
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     justify-content: flex-start;
@@ -61,8 +56,24 @@ const STitle = styled.h2<any>`
 
 const SWord: any = styled.div`
   display: flex;
+  transition: transform 300ms
+    ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+
   ${({ theme }: { theme: Theme }) => theme.sizes.xs} {
     margin-right: 1rem;
+  }
+
+  ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+    &:first-child {
+      transform: translateX(
+        -${(props) => Math.floor((props as any).offset * 0.05)}px
+      );
+    }
+    &:last-child {
+      transform: translateX(
+        ${(props) => Math.floor((props as any).offset * 0.05)}px
+      );
+    }
   }
 `;
 
@@ -89,9 +100,9 @@ export const Title: React.FC<ITitle & DOMAttributes<HTMLDivElement>> = ({
   let position = 0;
 
   return (
-    <STitle offset={offset} className={inView ? "in-view" : ""}>
+    <STitle className={inView ? "in-view" : ""}>
       {text.split(" ").map((word, key) => (
-        <SWord key={key}>
+        <SWord offset={offset} key={key}>
           {word.split("").map((char, key) => {
             position++;
             return (
