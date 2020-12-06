@@ -19,7 +19,7 @@ const SFlex = styled.div`
   p {
     flex-grow: 1;
     line-height: 1.6;
-    transform: translateX(3rem) skew(4deg);
+    transform: translateY(3rem) skew(4deg);
     opacity: 0;
     margin-top: 1rem;
     padding: 1rem 0;
@@ -28,6 +28,7 @@ const SFlex = styled.div`
       opacity 500ms ease 400ms;
 
     ${({ theme }: { theme: Theme }) => theme.sizes.md} {
+      transform: translateX(3rem) skew(4deg);
       margin-top: 0;
       padding: 1rem;
       max-width: 36rem;
