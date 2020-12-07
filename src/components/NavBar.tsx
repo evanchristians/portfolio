@@ -15,8 +15,8 @@ const SHome = styled.a`
   background: ${({ theme }: { theme: Theme }) => theme.colors.background};
   align-items: center;
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
-  transition: all 400ms
-    ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
+  transition: color 400ms
+    ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
   &:after {
     z-index: -1;
@@ -118,7 +118,7 @@ const SNavBar = styled.nav`
         bottom: -4px;
         right: 0;
         background: ${({ theme }: { theme: Theme }) => theme.colors.primary};
-        transition: width 300ms
+        transition: width 400ms
           ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
       }
 
