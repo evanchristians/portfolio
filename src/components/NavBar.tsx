@@ -82,9 +82,14 @@ const SNavBar = styled.nav`
       }
 
       &:not(:first-child) {
-        background: #ffffff1f;
-        opacity: 0.2;
+        background: #0000001f;
+        opacity: 0.6;
+        text-decoration: line-through;
         cursor: not-allowed;
+
+        span {
+          color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
+        }
 
         &:hover > a {
           pointer-events: none;
