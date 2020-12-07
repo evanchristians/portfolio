@@ -65,7 +65,7 @@ const SProfileImage = styled.div<any>`
   img {
     ${({ theme }: { theme: Theme }) => theme.sizes.md} {
       transform: translateY(
-        calc(${(props) => Math.floor(props.offset) * 0.1}px - 85px)
+        calc(${(props) => Math.floor(props.offset) * 0.025}px - 25px)
       );
       transition: transform 300ms
         ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
