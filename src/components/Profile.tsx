@@ -51,7 +51,7 @@ const SProfileImage = styled.div<any>`
     position: absolute;
     top: 50%;
     line-height: 0.5;
-    right: 0;
+    right: -5px;
     color: #11111122;
     font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
     font-size: 20rem;
@@ -63,11 +63,13 @@ const SProfileImage = styled.div<any>`
   }
 
   img {
-    transform: translateY(
-      calc(${(props) => Math.floor(props.offset) * 0.1}px - 85px)
-    );
-    transition: transform 300ms
-      ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+    ${({ theme }: { theme: Theme }) => theme.sizes.md} {
+      transform: translateY(
+        calc(${(props) => Math.floor(props.offset) * 0.1}px - 85px)
+      );
+      transition: transform 300ms
+        ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+    }
   }
 `;
 
