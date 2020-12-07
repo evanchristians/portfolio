@@ -45,6 +45,23 @@ const SProfileImage = styled.div<any>`
     transform 4s 500ms
       ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
+  &:before {
+    content: "01";
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    line-height: 0.5;
+    right: 0;
+    color: #11111122;
+    font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
+    font-size: 20rem;
+    transform: translateY(
+      calc(-${(props) => Math.floor(props.offset) * 0.2}px + 100%)
+    );
+    transition: transform 300ms
+      ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+  }
+
   img {
     transform: translateY(
       calc(${(props) => Math.floor(props.offset) * 0.1}px - 85px)
