@@ -52,11 +52,11 @@ const SProfileImage = styled.div<any>`
     top: 50%;
     line-height: 0.5;
     right: -5px;
-    color: #ffffff22;
+    color: #ffffff33;
     font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
     font-size: 20rem;
     transform: translateY(
-      calc(-${(props) => Math.floor(props.offset) * 0.15}px + 100%)
+      calc(-${(props) => Math.floor(props.offset) * 0.15}px + 75%)
     );
     transition: transform 300ms
       ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
