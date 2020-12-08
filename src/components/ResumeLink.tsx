@@ -28,13 +28,12 @@ const SResumeLink = styled.a`
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   border: 1px solid ${({ theme }: { theme: Theme }) => theme.colors.white};
   cursor: pointer;
-  transform: translateY(3rem);
-  transition: opacity 2s
-      ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
-    transform 2s ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
-    color 400ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+  transform: translateY(.5rem);
+  transition: opacity 1s,
+    transform 1.4s ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
+    color 200ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   &:last-of-type {
-    transition-delay: 200ms;
+    transition-delay: 100ms;
   }
 
   &:after {
@@ -90,13 +89,13 @@ export const ResumeLink: React.FC<IResumeLink> = () => {
       }}
     >
       <SResumeLinkContainer>
-        <SResumeLink
+        {/* <SResumeLink
           rel="noreferrer"
           className={isInView ? "in" : undefined}
           href="mailto:evanryk@gmail.com"
         >
           say hi <i className="fas fa-envelope"></i>
-        </SResumeLink>
+        </SResumeLink> */}
         <SResumeLink
           rel="noreferrer"
           className={isInView ? "in" : undefined}
