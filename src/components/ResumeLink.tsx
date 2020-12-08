@@ -11,7 +11,7 @@ const SResumeLinkContainer = styled.div`
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
   }
 `;
 
@@ -20,6 +20,7 @@ const SResumeLink = styled.a`
   position: relative;
   display: inline-flex;
   align-items: center;
+  line-height: 1;
   width: fit-content;
   margin: 0 auto;
   padding: 1rem;
@@ -28,12 +29,23 @@ const SResumeLink = styled.a`
   color: ${({ theme }: { theme: Theme }) => theme.colors.white};
   border: 1px solid ${({ theme }: { theme: Theme }) => theme.colors.white};
   cursor: pointer;
-  transform: translateY(.5rem);
+  transform: translateX(1.2rem);
   transition: opacity 1s,
     transform 1.4s ${({ theme }: { theme: Theme }) => theme.easings.outQuint},
     color 200ms ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   &:last-of-type {
-    transition-delay: 100ms;
+    transition-delay: 200ms;
+    color: ${({ theme }: { theme: Theme }) => theme.colors.background};
+    background: ${({ theme }: { theme: Theme }) => theme.colors.white};
+    &:after {
+      content: unset;
+    }
+    &:hover {
+      color: ${({ theme }: { theme: Theme }) => theme.colors.background};
+      i {
+        transform: translateX(0.25rem);
+      }
+    }
   }
 
   &:after {
@@ -62,6 +74,8 @@ const SResumeLink = styled.a`
   i {
     margin-left: 0.5rem;
     font-size: 12px;
+    transition: transform 300ms
+      ${({ theme }: { theme: Theme }) => theme.easings.outBack};
   }
 
   &.in {
@@ -89,20 +103,20 @@ export const ResumeLink: React.FC<IResumeLink> = () => {
       // }}
     >
       <SResumeLinkContainer>
-        {/* <SResumeLink
+        <SResumeLink
           rel="noreferrer"
           className={isInView ? "in" : undefined}
           href="mailto:evanryk@gmail.com"
         >
           say hi <i className="fas fa-envelope"></i>
-        </SResumeLink> */}
+        </SResumeLink>
         <SResumeLink
           rel="noreferrer"
           className={isInView ? "in" : undefined}
           href="https://resume.evanchristians.co.za"
           target="_blank"
         >
-          resume <i className="fas fa-external-link-alt"></i>
+          resume <i className="fas fa-arrow-right"></i>
         </SResumeLink>
       </SResumeLinkContainer>
     </Viewport>

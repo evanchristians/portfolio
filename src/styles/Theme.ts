@@ -8,6 +8,7 @@ export const theme = {
     compliment: "#930077",
     primary: "#fff",
     primaryTransparent: "#ffffffaa",
+    primaryTransparenter: "#ffffff33",
     white: "#fff",
     warning: "#F2C744",
     black: "#202020",
