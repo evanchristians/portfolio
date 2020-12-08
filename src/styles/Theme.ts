@@ -6,9 +6,9 @@ export const theme = {
     background: "#21252B",
     mainDarker: "#C5445E",
     compliment: "#930077",
-    primary: "#eee",
-    primaryTransparent: "#eeeeeeaa",
-    white: "#eee",
+    primary: "#fff",
+    primaryTransparent: "#ffffffaa",
+    white: "#fff",
     warning: "#F2C744",
     black: "#202020",
     shadow: "#01010155"
