@@ -88,9 +88,9 @@ export const AboutMe: React.FC<IAboutMe> = ({ offset }) => {
         await sleep(300);
         setAnimateHeading(true);
       }}
-      onLeave={() => {
-        setIsInView(false);
-      }}
+      // onLeave={() => {
+      //   setIsInView(false);
+      // }}
     >
       <SHeadingContainer>
         <span>01</span>

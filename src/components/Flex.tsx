@@ -64,9 +64,9 @@ export const Flex: React.FC<IFlex> = ({ children }) => {
       onEnter={() => {
         setIsInView(true);
       }}
-      onLeave={() => {
-        setIsInView(false);
-      }}
+      // onLeave={() => {
+      //   setIsInView(false);
+      // }}
     >
       <SFlex className={isInView ? "in" : undefined}>{children}</SFlex>
     </Viewport>

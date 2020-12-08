@@ -57,7 +57,7 @@ const SProfileImage = styled.div<any>`
     font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
     font-size: 20rem;
     transform: translateY(
-      calc(-${(props) => Math.floor(props.offset) * 0.15}px + 75%)
+      calc(-${(props) => Math.floor(props.offset) * 0.05}px + 50%)
     );
     transition: transform 300ms
       ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
@@ -69,7 +69,7 @@ const SProfileImage = styled.div<any>`
         calc(${(props) => Math.floor(props.offset) * 0.04}px - 25px)
       );
       transition: transform 300ms
-        ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
+        ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
     }
   }
 `;
@@ -104,9 +104,9 @@ export const Profile: React.FC<IProfile> = ({ offset }) => {
           await sleep(100);
           setAnimateImage(true);
         }}
-        onLeave={() => {
-          setIsInView(false);
-        }}
+        // onLeave={() => {
+        //   setIsInView(false);
+        // }}
       >
         <SProfileImage
           width="512"

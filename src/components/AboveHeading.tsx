@@ -61,9 +61,9 @@ export const AboveHeading: React.FC<IAboveHeading> = () => {
         setIsInView(true);
         setAnimateHeading(true);
       }}
-      onLeave={() => {
-        setIsInView(false);
-      }}
+      // onLeave={() => {
+      //   setIsInView(false);
+      // }}
     >
       <SHeading
         isInView={isInView}

@@ -60,10 +60,10 @@ const Index: React.FC<IIndex> = () => {
                 await sleep(500);
                 setSubTextIsIn(true);
               }}
-              onLeave={() => {
-                setTitleIsIn(false);
-                setSubTextIsIn(false);
-              }}
+              // onLeave={() => {
+              //   setTitleIsIn(false);
+              //   setSubTextIsIn(false);
+              // }}
             >
               <h1 style={{ display: "none" }}>Evan Christians</h1>
               <AboveHeading />
