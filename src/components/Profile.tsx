@@ -52,7 +52,8 @@ const SProfileImage = styled.div<any>`
     top: 50%;
     line-height: 0.5;
     right: -5px;
-    color: #ffffff33;
+    color: ${({theme}: {theme: Theme}) => theme.colors.background};
+    opacity: .25;
     font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
     font-size: 20rem;
     transform: translateY(
