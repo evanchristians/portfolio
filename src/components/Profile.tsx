@@ -52,15 +52,15 @@ const SProfileImage = styled.div<any>`
     top: 50%;
     line-height: 0.5;
     right: -5px;
-    color: ${({theme}: {theme: Theme}) => theme.colors.background};
-    opacity: .25;
+    color: ${({ theme }: { theme: Theme }) => theme.colors.background};
+    opacity: 0.25;
     font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
     font-size: 20rem;
     transform: translateY(
       calc(-${(props) => Math.floor(props.offset) * 0.15}px + 75%)
     );
     transition: transform 300ms
-      ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
+      ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
   }
 
   img {
