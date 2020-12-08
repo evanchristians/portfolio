@@ -60,16 +60,16 @@ const SProfileImage = styled.div<any>`
       calc(-${(props) => Math.floor(props.offset) * 0.15}px + 75%)
     );
     transition: transform 300ms
-      ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+      ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
   }
 
   img {
     ${({ theme }: { theme: Theme }) => theme.sizes.md} {
       transform: translateY(
-        calc(${(props) => Math.floor(props.offset) * 0.025}px - 25px)
+        calc(${(props) => Math.floor(props.offset) * 0.04}px - 25px)
       );
       transition: transform 300ms
-        ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
+        ${({ theme }: { theme: Theme }) => theme.easings.outExpo};
     }
   }
 `;
