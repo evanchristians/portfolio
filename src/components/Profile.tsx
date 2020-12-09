@@ -85,11 +85,11 @@ export const Profile: React.FC<IProfile> = ({ offset }) => {
 
   useEffect(() => {
     if (imageIsLoaded) {
-      setTimeout(() => {
+      let sleep = setTimeout(() => {
         setAnimateImage(false);
       }, 350);
+      return () => clearTimeout(sleep);
     }
-    return () => clearTimeout();
   }, [animateImage, imageIsLoaded]);
 
   return (
