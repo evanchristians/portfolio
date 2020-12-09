@@ -89,11 +89,6 @@ export default class MyDocument extends Document {
                   za
                 "
                 />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link
-                  href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&family=Work+Sans:wght@800;900&display=swap"
-                  rel="stylesheet"
-                />
                 <script src="https://kit.fontawesome.com/ce5d40ef27.js" />
                 {process.env.NODE_ENV === "production" ? (
                   <>
