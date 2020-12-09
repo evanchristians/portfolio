@@ -81,16 +81,17 @@ interface IProfile {
 export const Profile: React.FC<IProfile> = ({ offset }) => {
   const [isInView, setIsInView] = useState(false);
   const [animateImage, setAnimateImage] = useState(false);
+  const [imageIsLoaded, setImageIsLoaded] = useState(false);
 
   useEffect(() => {
-    let sleep = setTimeout(() => {
-      setAnimateImage(false);
-    }, 350);
-    if (!animateImage)
-      return () => {
-        clearTimeout(sleep);
-      };
-  }, [animateImage]);
+    if (imageIsLoaded) {
+      setTimeout(() => {
+        setAnimateImage(false);
+      }, 350);
+    }
+    return () => clearTimeout();
+  }, [animateImage, imageIsLoaded]);
+
   return (
     <SProfileContainer
       isInView={isInView}
@@ -104,9 +105,6 @@ export const Profile: React.FC<IProfile> = ({ offset }) => {
           await sleep(100);
           setAnimateImage(true);
         }}
-        // onLeave={() => {
-        //   setIsInView(false);
-        // }}
       >
         <SProfileImage
           width="512"
@@ -120,6 +118,7 @@ export const Profile: React.FC<IProfile> = ({ offset }) => {
             width={600}
             height={600}
             quality={100}
+            onLoad={() => setImageIsLoaded(true)}
           ></Image>
         </SProfileImage>
       </Viewport>
