@@ -9,7 +9,7 @@ interface ISubText {
 
 const SSubText = styled.p<any>`
   text-align: center;
-  font-size: clamp(30px, 5vw, 54px);
+  font-size: clamp(32px, 3vw, 54px);
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   font-weight: 800;
   color: transparent;

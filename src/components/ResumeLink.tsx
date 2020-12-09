@@ -7,11 +7,11 @@ import { Theme } from "../types";
 const SResumeLinkContainer = styled.div`
   display: flex;
   gap: 1rem;
-  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
-    flex-direction: row;
-    gap: 1rem;
+    justify-content: flex-start;
   }
 `;
 
@@ -22,7 +22,6 @@ const SResumeLink = styled.a`
   align-items: center;
   line-height: 1;
   width: fit-content;
-  margin: 0 auto;
   padding: 1rem;
   text-decoration: none;
   opacity: 0;

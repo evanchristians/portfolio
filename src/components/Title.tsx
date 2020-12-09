@@ -14,7 +14,7 @@ const STitle = styled.h2<any>`
   flex-wrap: wrap;
   justify-content: center;
   padding: 1rem 0;
-  font-size: clamp(64px, 10vw, 144px);
+  font-size: clamp(64px, 8vw, 132px);
   font-weight: 900;
   font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
   line-height: 0.9;
@@ -56,6 +56,8 @@ const STitle = styled.h2<any>`
 
 const SWord: any = styled.div`
   display: flex;
+  justify-content: center;
+  width: 100%;
   transition: transform 300ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
@@ -64,6 +66,7 @@ const SWord: any = styled.div`
   }
 
   ${({ theme }: { theme: Theme }) => theme.sizes.sm} {
+    justify-content: flex-start;
     &:first-child {
       transform: translateX(
         -${(props) => Math.floor((props as any).offset * 0.05)}px
