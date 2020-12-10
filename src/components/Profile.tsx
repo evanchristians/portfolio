@@ -119,7 +119,7 @@ export const Profile: React.FC<IProfile> = ({ offset }) => {
             src="/img/me_transparent.png"
             width={600}
             height={600}
-            quality={80}
+            quality={90}
             loading="eager"
             onLoad={() => setImageIsLoaded(true)}
           ></Image>
