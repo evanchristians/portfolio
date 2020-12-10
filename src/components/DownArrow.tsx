@@ -60,7 +60,7 @@ interface IDownArrow {
 export const DownArrow: React.FC<IDownArrow> = ({ show }) => {
   return (
     <SDownArrow show={show}>
-          <FontAwesomeIcon icon={faArrowDown} />
+      <FontAwesomeIcon icon={faArrowDown} />
       <span>scroll</span>
     </SDownArrow>
   );

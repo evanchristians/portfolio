@@ -56,14 +56,11 @@ const Index: React.FC<IIndex> = () => {
             <Viewport
               type="overlap"
               onEnter={async () => {
+                await sleep(500);
                 setTitleIsIn(true);
                 await sleep(500);
                 setSubTextIsIn(true);
               }}
-              // onLeave={() => {
-              //   setTitleIsIn(false);
-              //   setSubTextIsIn(false);
-              // }}
             >
               <h1 style={{ display: "none" }}>Evan Christians</h1>
               <AboveHeading />

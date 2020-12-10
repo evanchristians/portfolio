@@ -99,9 +99,6 @@ export const ResumeLink: React.FC<IResumeLink> = () => {
         await sleep(800);
         setIsInView(true);
       }}
-      // onLeave={() => {
-      //   setIsInView(false);
-      // }}
     >
       <SResumeLinkContainer>
         <SResumeLink
