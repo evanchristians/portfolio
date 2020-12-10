@@ -1,4 +1,4 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Viewport } from "react-is-in-viewport";
@@ -109,7 +109,7 @@ export const ResumeLink: React.FC<IResumeLink> = () => {
           className={isInView ? "in" : undefined}
           href="mailto:evanryk@gmail.com"
         >
-          say hi <i className="fas fa-envelope"></i>
+          say hi <FontAwesomeIcon icon={faEnvelope} />
         </SResumeLink>
         <SResumeLink
           rel="noreferrer"
