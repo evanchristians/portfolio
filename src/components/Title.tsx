@@ -85,7 +85,7 @@ const SChar: any = styled.div`
   color: transparent;
   transition: color 100ms
       ${({ theme }: { theme: Theme }) => theme.easings.outBack},
-    transform 400ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
+    transform 500ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
 
   &.in {
     filter: none;

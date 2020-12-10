@@ -10,6 +10,7 @@ const SProfileContainer = styled.div<any>`
   position: relative;
   width: clamp(min(18rem, 100%), 100%, 32rem);
   overflow: hidden;
+  border-radius: 6px;
   margin: 0;
   div {
     width: 100%;
@@ -37,7 +38,7 @@ const SProfileContainer = styled.div<any>`
 const SProfileImage = styled.div<any>`
   display: flex;
   background: ${({ theme }: { theme: Theme }) =>
-    theme.colors.primaryTransparenter};
+    theme.colors.primaryTransparent};
   opacity: ${(props) => (!props.isInView ? "0" : "1")};
   transform: ${(props) =>
     !props.isInView ? "scale(1.2) translateY(1rem)" : "scale(1.1)"};
@@ -53,7 +54,7 @@ const SProfileImage = styled.div<any>`
     line-height: 0.5;
     right: -5px;
     color: ${({ theme }: { theme: Theme }) => theme.colors.background};
-    opacity: 0.2;
+    opacity: 0.1;
     font-family: ${({ theme }: { theme: Theme }) => theme.fonts.headings};
     font-size: 20rem;
     transform: translateY(
