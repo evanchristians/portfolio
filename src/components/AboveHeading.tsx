@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Viewport } from "react-is-in-viewport";
 import styled from "styled-components";
+import { sleep } from "../lib/sleep";
 import { Theme } from "../types";
 
 const SHeading = styled.h3<any>`
@@ -58,12 +59,10 @@ export const AboveHeading: React.FC<IAboveHeading> = () => {
     <Viewport
       type="overlap"
       onEnter={async () => {
+        await sleep(500);
         setIsInView(true);
         setAnimateHeading(true);
       }}
-      // onLeave={() => {
-      //   setIsInView(false);
-      // }}
     >
       <SHeading
         isInView={isInView}

@@ -81,11 +81,11 @@ const SWord: any = styled.div`
 `;
 
 const SChar: any = styled.div`
-  transform: translate(-10px, 50px) rotate(15deg);
+  transform: translate(-10px, 40px) rotate(15deg);
   color: transparent;
   transition: color 100ms
       ${({ theme }: { theme: Theme }) => theme.easings.outBack},
-    transform 300ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
+    transform 400ms ${({ theme }: { theme: Theme }) => theme.easings.outBack};
 
   &.in {
     filter: none;
