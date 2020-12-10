@@ -104,6 +104,8 @@ export const Profile: React.FC<IProfile> = ({ offset }) => {
           setIsInView(true);
           await sleep(100);
           setAnimateImage(true);
+          await sleep(400);
+          setImageIsLoaded(true);
         }}
       >
         <SProfileImage
