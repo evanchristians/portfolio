@@ -6,7 +6,7 @@ const SHome = styled.a`
   text-decoration: none;
   position: relative;
   line-height: 0.75;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   overflow: hidden;
   padding: 0.75rem;
   display: flex;

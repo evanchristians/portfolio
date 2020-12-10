@@ -10,7 +10,7 @@ const SProfileContainer = styled.div<any>`
   position: relative;
   width: clamp(min(18rem, 100%), 100%, 32rem);
   overflow: hidden;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   margin: 0;
   div {
     width: 100%;

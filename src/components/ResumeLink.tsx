@@ -18,7 +18,7 @@ const SResumeLinkContainer = styled.div`
 `;
 
 const SResumeLink = styled.a`
-  border-radius: 6px;
+  /* border-radius: 6px; */
   overflow: hidden;
   z-index: 1;
   position: relative;

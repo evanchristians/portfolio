@@ -33,7 +33,7 @@ const SSocialIconLink = styled.a`
   cursor: pointer;
   display: flex;
   position: relative;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   width: 30px;
   height: 30px;
   justify-content: center;
