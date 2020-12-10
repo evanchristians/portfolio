@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Viewport } from "react-is-in-viewport";
 import styled from "styled-components";
@@ -41,7 +43,7 @@ const SResumeLink = styled.a`
     }
     &:hover {
       color: ${({ theme }: { theme: Theme }) => theme.colors.background};
-      i {
+      .svg-inline--fa {
         transform: translateX(0.25rem);
       }
     }
@@ -70,7 +72,7 @@ const SResumeLink = styled.a`
     }
   }
 
-  i {
+  .svg-inline--fa {
     margin-left: 0.5rem;
     font-size: 12px;
     transition: transform 300ms
@@ -115,7 +117,7 @@ export const ResumeLink: React.FC<IResumeLink> = () => {
           href="https://resume.evanchristians.co.za"
           target="_blank"
         >
-          resume <i className="fas fa-arrow-right"></i>
+          resume <FontAwesomeIcon icon={faArrowRight} />
         </SResumeLink>
       </SResumeLinkContainer>
     </Viewport>

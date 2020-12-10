@@ -89,7 +89,6 @@ export default class MyDocument extends Document {
                   za
                 "
                 />
-                <script src="https://kit.fontawesome.com/ce5d40ef27.js" />
                 {process.env.NODE_ENV === "production" ? (
                   <>
                     <script

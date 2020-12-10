@@ -1,3 +1,6 @@
+import { faArrowDown, faAt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import styled from "styled-components";
 import { Theme } from "../types";
 
@@ -56,7 +59,8 @@ interface IDownArrow {
 
 export const DownArrow: React.FC<IDownArrow> = ({ show }) => {
   return (
-    <SDownArrow show={show} className="fas fa-arrow-down">
+    <SDownArrow show={show}>
+          <FontAwesomeIcon icon={faArrowDown} />
       <span>scroll</span>
     </SDownArrow>
   );

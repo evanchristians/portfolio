@@ -1,3 +1,6 @@
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { Theme } from "../types";
 
@@ -41,7 +44,7 @@ const SSocialIconLink = styled.a`
   transition: color 200ms
     ${({ theme }: { theme: Theme }) => theme.easings.outQuint};
 
-  i {
+  .svg-inline--fa {
     font-size: 16px;
   }
 
@@ -92,7 +95,7 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
           target="_blank"
         >
           linkedin
-          <i className="fab fa-linkedin-in"></i>
+          <FontAwesomeIcon icon={faLinkedin } />
         </SSocialIconLink>
       </li>
       <li>
@@ -102,7 +105,7 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
           target="_blank"
         >
           github
-          <i className="fab fa-github"></i>
+          <FontAwesomeIcon icon={faGithub} />
         </SSocialIconLink>
       </li>
       <li>
@@ -112,7 +115,7 @@ export const SocialIcons: React.FC<ISocialIcons> = ({ inView }) => {
           target="_blank"
         >
           email
-          <i className="fas fa-at"></i>
+          <FontAwesomeIcon icon={faAt} />
         </SSocialIconLink>
       </li>
     </SSocialIcons>
