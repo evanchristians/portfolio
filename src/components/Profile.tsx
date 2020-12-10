@@ -37,7 +37,7 @@ const SProfileContainer = styled.div<any>`
 const SProfileImage = styled.div<any>`
   display: flex;
   background: ${({ theme }: { theme: Theme }) =>
-    theme.colors.primaryTransparent};
+    theme.colors.primaryTransparenter};
   opacity: ${(props) => (!props.isInView ? "0" : "1")};
   transform: ${(props) =>
     !props.isInView ? "scale(1.2) translateY(1rem)" : "scale(1.1)"};
