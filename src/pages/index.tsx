@@ -82,7 +82,6 @@ const Index: React.FC<IIndex> = () => {
           <AboutMe offset={scrollOffset}/>
         </Wrapper>
       </Page>
-      <Page></Page>
     </Container>
   );
 };
