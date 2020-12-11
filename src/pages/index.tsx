@@ -70,7 +70,7 @@ const Index: React.FC<IIndex> = () => {
                 text="Evan Christians"
               />
               <SubText offset={scrollOffset} inView={subTextIsIn}>
-                & I Build Things on the Web.
+                & I Build Things on the Internet.
               </SubText>
               <ResumeLink />
             </Viewport>
