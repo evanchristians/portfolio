@@ -26,6 +26,7 @@ const SDownArrow = styled.i<IDownArrow>`
   }
 
   span {
+    font-style: normal;
     font-weight: 400;
     letter-spacing: 1px;
     position: absolute;
