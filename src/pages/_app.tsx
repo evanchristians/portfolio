@@ -26,17 +26,9 @@ const App = ({ Component, pageProps }: AppProps) => {
 			<GoogleFonts href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap" />
 			<GoogleFonts href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800;900&display=swap" />
 			<GlobalStyle />
-			<LocomotiveScrollProvider
-				options={{
-					smooth: true,
-				}}
-				watch={[]}
-				containerRef={containerRef}
-			>
-				<main data-scroll-container ref={containerRef}>
-					<Component {...pageProps}></Component>
-				</main>
-			</LocomotiveScrollProvider>
+			<main data-scroll-container ref={containerRef}>
+				<Component {...pageProps}></Component>
+			</main>
 		</ThemeProvider>
 	);
 };
