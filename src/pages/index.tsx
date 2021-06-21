@@ -17,78 +17,77 @@ import { sleep } from "../lib/sleep";
 interface IIndex {}
 
 const Index: React.FC<IIndex> = () => {
-  const [titleIsIn, setTitleIsIn] = useState(false);
-  const [subTextIsIn, setSubTextIsIn] = useState(false);
-  const [fixedIsIn, setFixedIsIn] = useState(false);
-  const [scrollOffset, setScrollOffset] = useState(0);
-  const [showDownArrow, setShowDownArrow] = useState(false);
-  const handleScroll = () => setScrollOffset(window.pageYOffset);
+    const [titleIsIn, setTitleIsIn] = useState(false);
+    const [subTextIsIn, setSubTextIsIn] = useState(false);
+    const [fixedIsIn, setFixedIsIn] = useState(false);
+    const [scrollOffset, setScrollOffset] = useState(0);
+    const [showDownArrow, setShowDownArrow] = useState(false);
+    const handleScroll = () => setScrollOffset(window.pageYOffset);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
+    useEffect(() => {
+        if (scrollOffset <= 50) {
+            setShowDownArrow(true);
+        } else {
+            setShowDownArrow(false);
+        }
+    }, [scrollOffset]);
 
-  useEffect(() => {
-    if (scrollOffset <= 50) {
-      setShowDownArrow(true);
-    } else {
-      setShowDownArrow(false);
-    }
-  }, [scrollOffset]);
-
-  return (
-    <Container>
-      <Viewport
-        onEnter={() => {
-          setFixedIsIn(true);
-        }}
-      >
-        <SocialIcons inView={fixedIsIn} />
-        <DownArrow show={showDownArrow} />
-      </Viewport>
-      <NavBar />
-      <Page id="home">
-        <Wrapper>
-          <HeadingContainer>
+    return (
+        <Container>
             <Viewport
-              type="overlap"
-              onEnter={async () => {
-                await sleep(500);
-                setTitleIsIn(true);
-                await sleep(500);
-                setSubTextIsIn(true);
-              }}
+                onEnter={() => {
+                    setFixedIsIn(true);
+                }}
             >
-              <h1 style={{ display: "none" }}>Evan Christians</h1>
-              <AboveHeading />
-              <Title
-                offset={scrollOffset}
-                inView={titleIsIn}
-                text="Evan Christians"
-              />
-              <SubText offset={scrollOffset} inView={subTextIsIn}>
-                & I Build Things on the Internet.
-              </SubText>
-              <ResumeLink />
+                <SocialIcons inView={fixedIsIn} />
+                <DownArrow show={showDownArrow} />
             </Viewport>
-          </HeadingContainer>
-        </Wrapper>
-      </Page>
-      <Page id="about">
-        <Wrapper>
-          <AboutMe offset={scrollOffset}/>
-        </Wrapper>
-      </Page>
-    </Container>
-  );
+            <NavBar />
+            <Page id="home">
+                <Wrapper>
+                    <HeadingContainer>
+                        <Viewport
+                            type="overlap"
+                            onEnter={async () => {
+                                await sleep(500);
+                                setTitleIsIn(true);
+                                await sleep(500);
+                                setSubTextIsIn(true);
+                            }}
+                        >
+                            <h1 style={{ display: "none" }}>Evan Christians</h1>
+                            <AboveHeading />
+                            <Title
+                                offset={scrollOffset}
+                                inView={titleIsIn}
+                                text="Evan Christians"
+                            />
+                            <SubText offset={scrollOffset} inView={subTextIsIn}>
+                                & I Build Things on the Internet.
+                            </SubText>
+                            <ResumeLink />
+                        </Viewport>
+                    </HeadingContainer>
+                </Wrapper>
+            </Page>
+            <Page id="about">
+                <Wrapper>
+                    <AboutMe offset={scrollOffset} />
+                </Wrapper>
+            </Page>
+        </Container>
+    );
 };
 
 export const getStaticProps = async () => {
-  const data = null;
-  return { props: { data } };
+    const data = null;
+    return { props: { data } };
 };
 
 export default Index;
