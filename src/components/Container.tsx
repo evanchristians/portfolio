@@ -12,6 +12,5 @@ const SContainer = styled.section`
 interface IContainer {}
 
 export const Container: React.FC<IContainer> = ({ children }) => {
-    console.log(scroll);
     return <SContainer>{children}</SContainer>;
 };

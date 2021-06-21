@@ -25,7 +25,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             <GoogleFonts href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap" />
             <GoogleFonts href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800;900&display=swap" />
             <GlobalStyle />
-            <main data-scroll-container ref={containerRef}>
+            <main ref={containerRef}>
                 <Component {...pageProps}></Component>
             </main>
         </ThemeProvider>
