@@ -5,7 +5,6 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import { theme } from "../styles/Theme";
 import * as gtag from "../lib/gtag";
-import GoogleFonts from "next-google-fonts";
 
 const App = ({ Component, pageProps }: AppProps) => {
     const router = useRouter();
@@ -22,8 +21,14 @@ const App = ({ Component, pageProps }: AppProps) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <GoogleFonts href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap" />
-            <GoogleFonts href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800;900&display=swap" />
+            <link
+                href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap"
+                rel="stylesheet"
+            />
+            <link
+                href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800;900&display=swap"
+                rel="stylesheet"
+            />
             <GlobalStyle />
             <main ref={containerRef}>
                 <Component {...pageProps}></Component>
