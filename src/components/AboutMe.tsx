@@ -88,9 +88,6 @@ export const AboutMe: React.FC<IAboutMe> = ({ offset }) => {
                 await sleep(300);
                 setAnimateHeading(true);
             }}
-            // onLeave={() => {
-            //   setIsInView(false);
-            // }}
         >
             <SHeadingContainer>
                 <span>01</span>
@@ -114,7 +111,7 @@ export const AboutMe: React.FC<IAboutMe> = ({ offset }) => {
                         <br />
                     </p>
                     <p>
-                        I currently work as a <strong>Junior Developer</strong>{" "}
+                        I currently work as a <strong>Web Developer</strong>{" "}
                         at <strong>Lima Bean</strong>, a{" "}
                         <strong>Digital Marketing Agency</strong> focused on
                         providing <strong>End-to-End</strong> digital solutions
